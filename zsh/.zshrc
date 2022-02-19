@@ -25,13 +25,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # ---< DIR VARIABLES >---
-<<<<<<< HEAD
 export DOTDIR=~/.config
 export ZDOTDIR=~/.config/zsh
-=======
-export DOTDIR=~/dotfiles
-export ZDOTDIR=~/dotfiles/zsh
->>>>>>> 8f09d30ab5c153c3d03ff39f3cf2a1172bcd8f97
 export DEVDIR=~/dev
 
 # ---< SOURCE EXTERNAL CONFIGURATION FILES >---
