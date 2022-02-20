@@ -15,7 +15,7 @@ return require('packer').startup(function()
 
   ---< THEMES >---
   use { 'shaunsingh/nord.nvim' }
-  require('plugin-config.nord-nvim')
+  --  require('plugin-config.nord-nvim')
   use { 'rose-pine/neovim' }
   use "projekt0n/github-nvim-theme"
   -- To use this theme, uncomment the following line --> 
@@ -23,72 +23,80 @@ return require('packer').startup(function()
   use "shahmilav/darkside"
   use 'hzchirs/vim-material' 
   use 'cocopon/iceberg.vim'
---  vim.cmd [[ colorscheme iceberg ]]
+  --  vim.cmd [[ colorscheme iceberg ]]
+  use 'kaicataldo/material.vim'
+  vim.cmd [[
+  if (has('termguicolors'))
+    set termguicolors
+    endif
+    let g:material_terminal_italics = 1
+    let g:material_theme_style = 'ocean'
+    colorscheme material ]]
 
-  ---< NVIM-TREE >---
-  use {
-    'kyazdani42/nvim-tree.lua', 
-    requires = { 'kyazdani42/nvim-web-devicons' }
-  } 
-  require('plugin-config.nvim-tree')
+    ---< NVIM-TREE >---
+    use {
+      'kyazdani42/nvim-tree.lua', 
+      requires = { 'kyazdani42/nvim-web-devicons' }
+    } 
+    require('plugin-config.nvim-tree')
 
-  ---< LUALINE >---
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons' }
-  }
-  require('plugin-config.lualine')
-
-
-  ---< TELESCOPE >---
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = { 'nvim-lua/plenary.nvim' }
-  }
-  require('plugin-config.tele')
-  use {
-    'sudormrfbin/cheatsheet.nvim',
-
-    requires = {
-      {'nvim-telescope/telescope.nvim'},
-      {'nvim-lua/popup.nvim'},
-      {'nvim-lua/plenary.nvim'},
+    ---< LUALINE >---
+    use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 'kyazdani42/nvim-web-devicons' }
     }
-  }
+    require('plugin-config.lualine')
 
-  ---< DASHBOARD >---
-  use {
-    "startup-nvim/startup.nvim",
-    requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
-    config = function()
-      require"startup".setup()
-    end
-  }
-  require('plugin-config.dashboard-nvim')
 
-  ---< INDENT BLANKLINE >---
-  use "lukas-reineke/indent-blankline.nvim"
-  require('plugin-config.indent-blankline')
+    ---< TELESCOPE >---
+    use {
+      'nvim-telescope/telescope.nvim',
+      requires = { 'nvim-lua/plenary.nvim' }
+    }
+    require('plugin-config.tele')
+    use {
+      'sudormrfbin/cheatsheet.nvim',
 
-  ---< COKELINE (TABS) >---
-  use {
-    'noib3/nvim-cokeline',
-    requires = 'kyazdani42/nvim-web-devicons', -- If you want devicons
+      requires = {
+        {'nvim-telescope/telescope.nvim'},
+        {'nvim-lua/popup.nvim'},
+        {'nvim-lua/plenary.nvim'},
+      }
+    }
 
-  }
-  require('plugin-config.cokeline')
+    ---< DASHBOARD >---
+    use {
+      "startup-nvim/startup.nvim",
+      requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+      config = function()
+        require"startup".setup()
+      end
+    }
+    require('plugin-config.dashboard-nvim')
 
-  ---< GIT >---
-  use 'tpope/vim-fugitive'
-  use 'airblade/vim-gitgutter'
+    ---< INDENT BLANKLINE >---
+    use "lukas-reineke/indent-blankline.nvim"
+    require('plugin-config.indent-blankline')
 
-  ---< COMPLETION >---
-  use {'neoclide/coc.nvim', branch = 'release'}
-  use 'rstacruz/vim-closer'
-  use 'tpope/vim-endwise'
+    ---< COKELINE (TABS) >---
+    use {
+      'noib3/nvim-cokeline',
+      requires = 'kyazdani42/nvim-web-devicons', -- If you want devicons
 
-  --< LSP >--
-  use 'neovim/nvim-lspconfig' -- Collection of configurations for the built-in LSP
-  use 'williamboman/nvim-lsp-installer'
+    }
+    require('plugin-config.cokeline')
 
-end)
+    ---< GIT >---
+    use 'tpope/vim-fugitive'
+    use 'airblade/vim-gitgutter'
+
+    ---< COMPLETION >---
+    use {'neoclide/coc.nvim', branch = 'release'}
+    use 'rstacruz/vim-closer'
+    use 'tpope/vim-endwise'
+
+    --< LSP >--
+    use 'neovim/nvim-lspconfig' -- Collection of configurations for the built-in LSP
+    use 'williamboman/nvim-lsp-installer'
+
+  end)
