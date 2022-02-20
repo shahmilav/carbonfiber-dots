@@ -15,17 +15,17 @@ return require('packer').startup(function()
 
   ---< THEMES >---
   use { 'shaunsingh/nord.nvim' }
-  --  require('plugin-config.nord-nvim')
+  --require('plugin-config.nord-nvim')
   use { 'rose-pine/neovim' }
   use "projekt0n/github-nvim-theme"
-  -- To use this theme, uncomment the following line --> 
+  -- To use this theme, uncomment the following line
   -- require('plugin-config.github-theme')
   use "shahmilav/darkside"
   use 'hzchirs/vim-material' 
   use 'cocopon/iceberg.vim'
-  --  vim.cmd [[ colorscheme iceberg ]]
+  vim.cmd [[ colorscheme iceberg ]]
   use 'kaicataldo/material.vim'
-  vim.cmd [[
+  --[[ vim.cmd [[
   if (has('termguicolors'))
     set termguicolors
     endif
