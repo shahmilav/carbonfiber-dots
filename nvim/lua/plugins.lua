@@ -21,9 +21,11 @@ return require('packer').startup(function()
   -- To use this theme, uncomment the following line
   -- require('plugin-config.github-theme')
   use "shahmilav/darkside"
-  use 'hzchirs/vim-material' 
+  use 'hzchirs/vim-material'
+  use 'joshdick/onedark.vim'
+  vim.cmd [[colorscheme onedark]]
   use 'cocopon/iceberg.vim'
-  vim.cmd [[ colorscheme iceberg ]]
+  --  vim.cmd [[ colorscheme iceberg ]]
   use 'kaicataldo/material.vim'
   --[[ vim.cmd [[
   if (has('termguicolors'))
