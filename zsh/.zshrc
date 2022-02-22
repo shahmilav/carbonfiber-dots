@@ -9,7 +9,9 @@
 
 # The startup function
 function goapt() {
-  brew update; brew upgrade; brew cleanup >/dev/null;
+  brew update 2>/dev/null; 
+  brew upgrade 2>/dev/null; 
+  brew cleanup 2>/dev/null; 
 }
 
 function greet() {
