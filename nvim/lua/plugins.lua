@@ -13,92 +13,91 @@ return require('packer').startup(function()
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   require('plugin-config.treesitter')
 
+  -------------------------------------------------------------------------------------
   ---< THEMES >---
   use { 'shaunsingh/nord.nvim' }
-  --require('plugin-config.nord-nvim')
+  use 'kaicataldo/material.vim'
   use { 'rose-pine/neovim' }
   use "projekt0n/github-nvim-theme"
-  -- To use this theme, uncomment the following line
-  -- require('plugin-config.github-theme')
   use "shahmilav/darkside"
+  use 'navarasu/onedark.nvim'
   use 'hzchirs/vim-material'
-  use 'joshdick/onedark.vim'
-  vim.cmd [[colorscheme onedark]]
+  use 'olimorris/onedarkpro.nvim'
   use 'cocopon/iceberg.vim'
-  --  vim.cmd [[ colorscheme iceberg ]]
-  use 'kaicataldo/material.vim'
-  --[[ vim.cmd [[
-  if (has('termguicolors'))
-    set termguicolors
-    endif
-    let g:material_terminal_italics = 1
-    let g:material_theme_style = 'ocean'
-    colorscheme material ]]
 
-    ---< NVIM-TREE >---
-    use {
-      'kyazdani42/nvim-tree.lua', 
-      requires = { 'kyazdani42/nvim-web-devicons' }
-    } 
-    require('plugin-config.nvim-tree')
+  require('onedarkpro').load()
+  -------------------------------------------------------------------------------------
 
-    ---< LUALINE >---
-    use {
-      'nvim-lualine/lualine.nvim',
-      requires = { 'kyazdani42/nvim-web-devicons' }
+  ---< NVIM-TREE >---
+  use {
+    'kyazdani42/nvim-tree.lua', 
+    requires = { 'kyazdani42/nvim-web-devicons' }
+  } 
+  require('plugin-config.nvim-tree')
+
+  ---< STATUSBAR >---
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' }
+  }
+  require('lualine').setup()
+
+  ---< TELESCOPE >---
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { 'nvim-lua/plenary.nvim' }
+  }
+  require('plugin-config.tele')
+  use {
+    'sudormrfbin/cheatsheet.nvim',
+
+    requires = {
+      {'nvim-telescope/telescope.nvim'},
+      {'nvim-lua/popup.nvim'},
+      {'nvim-lua/plenary.nvim'},
     }
-    require('plugin-config.lualine')
+  }
 
+  ---< DASHBOARD >---
+  use {
+    "startup-nvim/startup.nvim",
+    requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+    config = function()
+      require"startup".setup()
+    end
+  }
+  require('plugin-config.dashboard-nvim')
 
-    ---< TELESCOPE >---
-    use {
-      'nvim-telescope/telescope.nvim',
-      requires = { 'nvim-lua/plenary.nvim' }
-    }
-    require('plugin-config.tele')
-    use {
-      'sudormrfbin/cheatsheet.nvim',
+  ---< INDENT BLANKLINE >---
+  use "lukas-reineke/indent-blankline.nvim"
+  require('plugin-config.indent-blankline')
 
-      requires = {
-        {'nvim-telescope/telescope.nvim'},
-        {'nvim-lua/popup.nvim'},
-        {'nvim-lua/plenary.nvim'},
-      }
-    }
+  ---< COKELINE (TABS) >---
+  use {
+    'noib3/nvim-cokeline',
+    requires = 'kyazdani42/nvim-web-devicons'
+  } 
+  require('plugin-config.cokeline')
 
-    ---< DASHBOARD >---
-    use {
-      "startup-nvim/startup.nvim",
-      requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
-      config = function()
-        require"startup".setup()
-      end
-    }
-    require('plugin-config.dashboard-nvim')
+  ---< GIT >---
+  use 'tpope/vim-fugitive'
+  use {
+  'lewis6991/gitsigns.nvim',
+  requires = {
+    'nvim-lua/plenary.nvim'
+  },
+  config = function()
+    require('gitsigns').setup()
+  end
+}
 
-    ---< INDENT BLANKLINE >---
-    use "lukas-reineke/indent-blankline.nvim"
-    require('plugin-config.indent-blankline')
+  ---< COMPLETION >---
+  use {'neoclide/coc.nvim', branch = 'release'}
+  use 'rstacruz/vim-closer'
+  use 'tpope/vim-endwise'
 
-    ---< COKELINE (TABS) >---
-    use {
-      'noib3/nvim-cokeline',
-      requires = 'kyazdani42/nvim-web-devicons', -- If you want devicons
+  --< LSP >--
+  use 'neovim/nvim-lspconfig' -- Collection of configurations for the built-in LSP
+  use 'williamboman/nvim-lsp-installer'
 
-    }
-    require('plugin-config.cokeline')
-
-    ---< GIT >---
-    use 'tpope/vim-fugitive'
-    use 'airblade/vim-gitgutter'
-
-    ---< COMPLETION >---
-    use {'neoclide/coc.nvim', branch = 'release'}
-    use 'rstacruz/vim-closer'
-    use 'tpope/vim-endwise'
-
-    --< LSP >--
-    use 'neovim/nvim-lspconfig' -- Collection of configurations for the built-in LSP
-    use 'williamboman/nvim-lsp-installer'
-
-  end)
+end)
