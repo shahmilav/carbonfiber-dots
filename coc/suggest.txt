@@ -1,3 +1,6 @@
+c|config|around
+p|plugin|around
+plug|plugin|around
 |null|file
 d|dev|file
 p|pylint|file
@@ -18,7 +21,6 @@ c|coolNum|around
 pr|println|around
 greet|greeting|around
 DATA_|DATA_PASS|around
-c|config|around
 pl|plugin|around
 req|require|around
 home|homebrew|file
@@ -36,7 +38,6 @@ tree|treesitter|around
 mil|milavshah|file
 |google-java-format-1.13.0-all-deps.jar|file
 to|tools|file
-p|plugin|around
 t|tools|file
 f|font|around
 N|Nerd|around
