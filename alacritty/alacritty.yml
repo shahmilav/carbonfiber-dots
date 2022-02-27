@@ -93,7 +93,7 @@ font:
     family: "Liga SFMono Nerd Font"
 
     # The `style` can be specified to pick a specific face.
-    style: Regular
+    style: Semibold
     # Bold font face
   bold:
     # Font family
@@ -111,7 +111,7 @@ font:
     # value specified for the normal font.
     family: "Liga SFMono Nerd Font"
     # The `style` can be specified to pick a specific face.
-    style: Italic
+    style: Semibold Italic
     # Bold italic font face
   bold_italic:
     # Font family
@@ -120,7 +120,7 @@ font:
     # value specified for the normal font.
     family: "Liga SFMono Nerd Font"
     # The `style` can be specified to pick a specific face.
-    style: Semibold Italic
+    style: Bold Italic
 
   # Point size
   size: 21.0
