@@ -72755,6 +72755,8 @@
 	<true/>
 	<key>DimOnlyText</key>
 	<true/>
+	<key>EnableDivisionView</key>
+	<true/>
 	<key>FocusFollowsMouse</key>
 	<true/>
 	<key>HapticFeedbackForEsc</key>
@@ -72763,6 +72765,8 @@
 	<true/>
 	<key>HideMenuBarInFullscreen</key>
 	<false/>
+	<key>HideScrollbar</key>
+	<true/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -72771,7 +72775,7 @@
 			<key>ASCII Anti Aliased</key>
 			<true/>
 			<key>ASCII Ligatures</key>
-			<true/>
+			<false/>
 			<key>AWDS Pane Directory</key>
 			<string></string>
 			<key>AWDS Pane Option</key>
@@ -73511,11 +73515,11 @@
 			<key>Blink Allowed</key>
 			<false/>
 			<key>Blinking Cursor</key>
-			<true/>
+			<false/>
 			<key>Blur</key>
-			<true/>
+			<false/>
 			<key>Blur Radius</key>
-			<real>20</real>
+			<real>0.10000000000000001</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -74298,7 +74302,7 @@
 			<key>Non-ASCII Ligatures</key>
 			<false/>
 			<key>Normal Font</key>
-			<string>SFMono-Semibold 21</string>
+			<string>LigaSFMonoNerdFont-Semibold 21</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Open Password Manager Automatically</key>
@@ -74629,7 +74633,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Thin Strokes</key>
-			<integer>4</integer>
+			<integer>0</integer>
 			<key>Title Components</key>
 			<integer>4</integer>
 			<key>Title Function</key>
@@ -74644,7 +74648,7 @@
 				</dict>
 			</array>
 			<key>Transparency</key>
-			<real>0.0</real>
+			<real>0.029999999999999999</real>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
@@ -74668,7 +74672,7 @@
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Use Non-ASCII Font</key>
-			<true/>
+			<false/>
 			<key>Use Separate Colors for Light and Dark Mode</key>
 			<false/>
 			<key>Use Tab Color</key>
@@ -74684,7 +74688,7 @@
 			<key>Use Underline Color (Light)</key>
 			<false/>
 			<key>Vertical Spacing</key>
-			<real>1.2</real>
+			<real>1.02</real>
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
@@ -76592,12 +76596,18 @@
 	<key>TabViewType</key>
 	<integer>0</integer>
 	<key>TerminalMargin</key>
-	<integer>15</integer>
+	<integer>10</integer>
 	<key>TerminalVMargin</key>
-	<integer>15</integer>
+	<integer>10</integer>
 	<key>UIElementRequiresHotkeys</key>
 	<true/>
+	<key>UnderlineCursorHeight</key>
+	<real>5</real>
+	<key>UseBorder</key>
+	<true/>
 	<key>VisualIndicatorForEsc</key>
+	<false/>
+	<key>WindowNumber</key>
 	<false/>
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
