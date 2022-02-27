@@ -5,7 +5,6 @@
 # set by alacritty itself.
 env:
   # TERM variable
-  #
   # This value is used to set the `$TERM` environment variable for
   # each instance of Alacritty. If it is not present, alacritty will
   # check the local terminfo database and use `alacritty` if it is
@@ -23,7 +22,7 @@ window:
   # If both are `0`, this setting is ignored.
   dimensions:
     columns: 93
-    lines: 30
+    lines: 25
   # Window position (changes require restart)
   #
   # Specified in number of pixels.
@@ -88,10 +87,10 @@ font:
     # Font family
     #
     # Default:
-    #   - (macOS) JetBrains Mono Slashed
+    #   - (macOS) Liga SFMono Nerd Font
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: "JetBrains Mono Slashed"
+    family: "Liga SFMono Nerd Font"
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -101,7 +100,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: "JetBrains Mono Slashed"
+    family: "Liga SFMono Nerd Font"
     # The `style` can be specified to pick a specific face.
     style: Bold
     # Italic font face
@@ -110,7 +109,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: "JetBrains Mono Slashed"
+    family: "Liga SFMono Nerd Font"
     # The `style` can be specified to pick a specific face.
     style: Italic
     # Bold italic font face
@@ -119,18 +118,18 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: "JetBrains Mono Slashed"
+    family: "Liga SFMono Nerd Font"
     # The `style` can be specified to pick a specific face.
     style: Semibold Italic
 
   # Point size
-  size: 20.0
+  size: 21.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
   offset:
     #  x: 0
-    y: 2
+    y: 3
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the right,
   # increasing `y` moves the glyph upwards.
@@ -152,8 +151,7 @@ font:
   # This is a global setting and will require a log out or restart to take
   # effect.
   use_thin_strokes: true
-
-    # If `true`, bold text is drawn using the bright color variants.
+  # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 colors:
   # Default colors
@@ -183,3 +181,12 @@ colors:
     cyan: '#56b6c2'
     white: '#feffff'
 theme: darkside
+
+
+cursor:
+  style:
+    shape: underline
+    blinking: Always
+  blink_interval: 500
+  unfocused_hollow: true
+  thickness: 0.30
