@@ -1,3 +1,7 @@
 zsh/zsh_history
 zsh/zsh_history.symlink
+
+zsh/.zcompdump
+zsh/.zcompcache/
+
 nvim/plugin/
