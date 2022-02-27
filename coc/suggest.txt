@@ -1,3 +1,5 @@
+Bold|Bold|around
+Hea|Heavy|around
 c|config|around
 p|plugin|around
 plug|plugin|around
@@ -11,7 +13,6 @@ d|dotfiles|file
 dotf|dotfiles|file
 on|only|around
 tit|titlebar|around
-Bold|Bold|around
 font|font-weight|around
 JetBr|JetBrains|around
 fon|font-family|around
