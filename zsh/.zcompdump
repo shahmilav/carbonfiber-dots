@@ -447,6 +447,7 @@ _comps=(
 'eview' '_vim'
 'evim' '_vim'
 'evince' '_evince'
+'exa' '_exa'
 'exec' '_exec'
 'expand' '_unexpand'
 'explodepkg' '_pkgtool'
