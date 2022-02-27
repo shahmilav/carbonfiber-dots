@@ -15,13 +15,11 @@ return require('packer').startup(function()
 
   -------------------------------------------------------------------------------------
   ---< THEMES >---
-  use { 'shaunsingh/nord.nvim' }
+  use 'shaunsingh/nord.nvim'
   use 'kaicataldo/material.vim'
-  use { 'rose-pine/neovim' }
   use "projekt0n/github-nvim-theme"
   use "shahmilav/darkside"
   use 'navarasu/onedark.nvim'
-  use 'hzchirs/vim-material'
   use 'olimorris/onedarkpro.nvim'
   use 'cocopon/iceberg.vim'
 
@@ -82,14 +80,14 @@ return require('packer').startup(function()
   ---< GIT >---
   use 'tpope/vim-fugitive'
   use {
-  'lewis6991/gitsigns.nvim',
-  requires = {
-    'nvim-lua/plenary.nvim'
-  },
-  config = function()
-    require('gitsigns').setup()
-  end
-}
+    'lewis6991/gitsigns.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    },
+    config = function()
+      require('gitsigns').setup()
+    end
+  }
 
   ---< COMPLETION >---
   use {'neoclide/coc.nvim', branch = 'release'}
