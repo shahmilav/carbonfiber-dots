@@ -15,7 +15,7 @@ env:
 window:
 
   # Window opacity
-  opacity: 0.98
+  opacity: 0.97
   # Window dimensions (changes require restart)
   #
   # Specified in number of columns/lines, not pixels.
@@ -72,13 +72,13 @@ window:
   # Override the variant of the GTK theme. Commonly supported values are `dark` and `light`.
   # Set this to `None` to use the default theme variant.
   #gtk_theme_variant: None
-  #scrolling:
+  scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
-  #history: 10000
+  history: 10000
   # Number of lines the viewport will move for every line scrolled when
   # scrollback is enabled (history > 0).
-  #multiplier: 3
+  multiplier: 3
 
 # Font configuration
 font:
@@ -190,3 +190,6 @@ cursor:
   blink_interval: 500
   unfocused_hollow: true
   thickness: 0.30
+
+selection:
+  save_to_clipboard: true
