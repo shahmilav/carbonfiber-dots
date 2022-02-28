@@ -1,5 +1,4 @@
-zsh/zsh_history
-zsh/zsh_history.symlink
+zsh/.zsh_history
 
 zsh/.zcompdump
 zsh/.zcompcache/
