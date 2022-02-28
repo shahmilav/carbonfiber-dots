@@ -36,7 +36,11 @@ source $ZDOTDIR/defaults.zsh
 source $ZDOTDIR/iterm.zsh
 source $ZDOTDIR/path.zsh
 
-# iTerm2 Shell Integration
+# Minimal Prompt
+#export PROMPT='%F{cyan}%~%f %F{green}$%f '
+#export RPROMPT='%F{red}%# %?%f'
+
+# iTerm Shell Integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # ---< SOURCE POWERELEVEL10K CONFIGURATION >---
