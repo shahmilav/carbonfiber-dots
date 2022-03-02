@@ -4,3 +4,4 @@ zsh/.zcompdump
 zsh/.zcompcache/
 
 nvim/plugin/
+coc/
