@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "coc-diagnostic": ">=0.23.1",
-    "coc-prettier": ">=1.1.25"
-  }
-}
