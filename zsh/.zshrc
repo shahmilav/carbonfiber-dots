@@ -10,7 +10,7 @@
 # The startup function
 
 function greet() {
-  echo "Hello, $1.\n" | lolcat
+  echo "Hello $1.\n" | lolcat
   return 0
 }
 # run the function
