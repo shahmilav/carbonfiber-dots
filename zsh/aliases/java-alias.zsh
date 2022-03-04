@@ -15,9 +15,19 @@ for i (**/*.java(D)) echo $i && google-java-format -i *;
 
 
 ## maven
+
+# mvn clean
+function mvnc() {
+  if [ -d "target" ]
+  then
+    mvn clean;
+    return 0;
+  fi
+  return 1;
+}
+
 alias mvnboot="mvn spring-boot:run"
 alias mvnfx="mvn javafx:run"
-alias mvnc="mvn clean"
 alias mvncd="mvn clean deploy"
 alias mvnce="mvn clean eclipse:clean eclipse:eclipse"
 alias mvnci="mvn clean install"
