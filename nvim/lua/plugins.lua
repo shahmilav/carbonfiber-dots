@@ -17,9 +17,7 @@ return require('packer').startup(function()
   ---< THEMES >---
   use 'shaunsingh/nord.nvim'
   use 'kaicataldo/material.vim'
-  use "projekt0n/github-nvim-theme"
   use "shahmilav/darkside"
-  use 'navarasu/onedark.nvim'
   use 'olimorris/onedarkpro.nvim'
   use 'cocopon/iceberg.vim'
 
@@ -46,15 +44,6 @@ return require('packer').startup(function()
     requires = { 'nvim-lua/plenary.nvim' }
   }
   require('plugin-config.tele')
-  use {
-    'sudormrfbin/cheatsheet.nvim',
-
-    requires = {
-      {'nvim-telescope/telescope.nvim'},
-      {'nvim-lua/popup.nvim'},
-      {'nvim-lua/plenary.nvim'},
-    }
-  }
 
   ---< DASHBOARD >---
   use {
