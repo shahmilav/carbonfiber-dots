@@ -36,7 +36,6 @@ source $ZDOTDIR/defaults.zsh
 source $ZDOTDIR/iterm.zsh
 source $ZDOTDIR/path.zsh
 
-source $ZDOTDIR/minimal-prompt.zsh
 
 # Brew
 export HOMEBREW_NO_ENV_HINTS
@@ -45,8 +44,8 @@ export HOMEBREW_NO_ENV_HINTS
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # ---< SOURCE POWERELEVEL10K CONFIGURATION >---
-#source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
-#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
