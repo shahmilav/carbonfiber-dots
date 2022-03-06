@@ -36,16 +36,17 @@ source $ZDOTDIR/defaults.zsh
 source $ZDOTDIR/iterm.zsh
 source $ZDOTDIR/path.zsh
 
-# Minimal Prompt
-#export PROMPT='%F{cyan}%~%f %F{green}$%f '
-#export RPROMPT='%F{red}%# %?%f'
+source $ZDOTDIR/minimal-prompt.zsh
 
-# iTerm Shell Integration
+# Brew
+export HOMEBREW_NO_ENV_HINTS
+
+# iTerm2 Shell Integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # ---< SOURCE POWERELEVEL10K CONFIGURATION >---
-source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
+#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
