@@ -68,7 +68,6 @@ require('onedarkpro').load()
     require('plugin-config.cokeline')
 
     ---< GIT >---
-    use 'tpope/vim-fugitive'
     use {
       'lewis6991/gitsigns.nvim',
       requires = {
