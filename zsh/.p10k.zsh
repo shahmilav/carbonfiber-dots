@@ -58,11 +58,11 @@
     #nvm                     # node.js version from nvm (https://github.com/nvm-sh/nvm)
     #nodeenv                 # node.js environment (https://github.com/ekalinin/nodeenv)
     # node_version          # node.js version
-    ## go_version            # go version (https://golang.org)
-    ## rust_version          # rustc version (https://www.rust-lang.org)
-    ## dotnet_version        # .NET version (https://dotnet.microsoft.com)
-    ## php_version           # php version (https://www.php.net/)
-    ## laravel_version       # laravel php framework version (https://laravel.com/)
+    # go_version            # go version (https://golang.org)
+    # rust_version          # rustc version (https://www.rust-lang.org)
+    # dotnet_version        # .NET version (https://dotnet.microsoft.com)
+    # php_version           # php version (https://www.php.net/)
+    # laravel_version       # laravel php framework version (https://laravel.com/)
     java_version          # java version (https://www.java.com/)
     #package               # name@version from package.json (https://docs.npmjs.com/files/package.json)
     #rbenv                   # ruby version from rbenv (https://github.com/rbenv/rbenv)
@@ -1036,8 +1036,8 @@
   typeset -g POWERLEVEL9K_JAVA_VERSION_PROJECT_ONLY=true
   # Show brief version.
   typeset -g POWERLEVEL9K_JAVA_VERSION_FULL=false
-  # Custom icon. 
-  typeset -g POWERLEVEL9K_JAVA_VERSION_VISUAL_IDENTIFIER_EXPANSION=''
+  # Custom icon.
+  typeset -g POWERLEVEL9K_JAVA_VERSION_VISUAL_IDENTIFIER_EXPANSION=''
 
   ###[ package: name@version from package.json (https://docs.npmjs.com/files/package.json) ]####
   # Package color.
