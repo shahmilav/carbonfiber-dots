@@ -1,5 +1,10 @@
 #!/opt/homebrew/bin/zsh
 
+function greet() {
+  echo "Hi $1.\n" | lolcat
+  return 0
+}
+
 function goapt() {
   brew update; brew upgrade; brew cleanup >/dev/null;
 }
@@ -39,15 +44,13 @@ function exists() {
 }
 
 256color() {
-  for i in {0..255};
-  do
-    print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M
-    )$((i%6)):#3}:+$'\n'};
-  done
+  for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done
 }
 
 take() {
- mkdir "$1";
- cd "$1";
- return 0;
+  mkdir "$1";
+  cd "$1";
+  return 0;
 }
+
+
