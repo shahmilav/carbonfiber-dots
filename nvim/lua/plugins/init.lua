@@ -75,11 +75,10 @@ local plugins = {
     "lewis6991/gitsigns.nvim",
     disable = not plugin_settings.status.gitsigns,
     opt = true,
-    config = override_req("gitsigns", "plugins.configs.others", "gitsigns"),
-    setup = function()
-      require("core.utils").packer_lazy_load "gitsigns.nvim"
-    end,
-  },
+    config = function()
+      require('gitsigns').setup()
+    end
+  }, 
 
   -- lsp stuff
 
@@ -96,7 +95,7 @@ local plugins = {
     end,
     config = override_req("lspconfig", "plugins.configs.lspconfig"),
   },
-
+  {  'williamboman/nvim-lsp-installer' },
   {
     "ray-x/lsp_signature.nvim",
     disable = not plugin_settings.status.lspsignature,
@@ -245,22 +244,14 @@ local plugins = {
     end,
   }, 
   {
-    "Pocco81/TrueZen.nvim",
-    cmd = {
-      "TZAtaraxis",
-      "TZMinimalist",
-      "TZFocus",
-    },
-    config = function()
-      -- check https://github.com/Pocco81/TrueZen.nvim#setup-configuration (init.lua version)
-    end,
-  },
-  {
     "luukvbaal/stabilize.nvim",
     config = function() require("stabilize").setup() end
   },
-
+  { 'preservim/nerdcommenter' },
+  { 'sheerun/vim-polyglot' },
+  { 'pineapplegiant/spaceduck' }
 }
+
 --label plugins for operational assistance
 plugins = require("core.utils").label_plugins(plugins)
 --remove plugins specified in chadrc
