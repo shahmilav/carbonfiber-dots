@@ -1,4 +1,4 @@
-echo "⚡hi milav \n" | lolcat
+starfetch | lolcat
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -19,9 +19,6 @@ source $ZDOTDIR/iterm.zsh
 source $ZDOTDIR/path.zsh
 
 BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-  [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-  #        eval "$("$BASE16_SHELL/profile_helper.sh")"
 
 export HOMEBREW_NO_ENV_HINTS
 

@@ -53,4 +53,7 @@ take() {
   return 0;
 }
 
+todo() {
+echo "* [ ] $1" >> ~/TODO.md
+}
 
