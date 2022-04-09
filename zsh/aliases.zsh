@@ -5,6 +5,17 @@ alias sortfiles='ls -a > sortfile.txt; sort sortfile.txt; rm sortfile.txt'
 alias bel='tput bel'
 alias rel='source ~/.zshrc'
 
+### LS ###
+alias ls='ls -GF'
+alias ll='ls -lGF'
+alias la='ls -GFA'
+
+### NAVIGATION ###
+alias ..='cd ../'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
+
 ### CONFIGURATION ###
 alias fishconf='cd ~/.config/fish/'
 
