@@ -8,12 +8,11 @@ Want the same look as the screenshot? Use the [Fira Code](https://github.com/ton
 * **Text Editor:** Neovim
 * **IDE:** IntelliJ 
 * **System Monitor:** Bottom
-* **Colorscheme:** Nord or [darkside](https://github.com/shahmilav/darkside-iTerm2)
-* **Font:** Iosevka SS02 (Anonymous Pro Style)
+* **Colorscheme:** Material Deep Ocean or [darkside](https://github.com/shahmilav/darkside-iTerm2)
+* **Font:** SF Mono 
 * **Browser:** Firefox Nightly
 
 ## Current Setup
-* OneDarkPro theme for Neovim and IntelliJ.
-* [darkside](https://github.com/shahmilav/darkside-iTerm2) theme for iTerm.
-* Iosevka SS02 (Anonymous Pro Style) font.
-* cascade userChrome for Firefox
+* Material ocean for IntelliJ, iTerm, and Neovim
+*  font.
+* Custom vertical-tabs userChrome for Firefox
