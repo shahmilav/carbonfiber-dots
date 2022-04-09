@@ -16,13 +16,15 @@ return require('packer').startup(function()
   ---------------------------------------------------------------------------------
   ---< THEMES >---
   use 'shaunsingh/nord.nvim'
-  use 'kaicataldo/material.vim'
+  use 'marko-cerovac/material.nvim'
   use "shahmilav/darkside"
   use 'olimorris/onedarkpro.nvim'
   use 'cocopon/iceberg.vim'
   use 'chriskempson/base16-vim'
 
-require('onedarkpro').load()
+
+  require('plugin-config.material-colo')
+  vim.cmd 'colorscheme material'
   -------------------------------------------------------------------------------------
 
     ---< NVIM-TREE >---
