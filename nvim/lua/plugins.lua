@@ -24,7 +24,7 @@ return require('packer').startup(function()
 
 
   require('plugin-config.material-colo')
-  vim.cmd 'colorscheme material'
+  vim.cmd 'colorscheme onedarkpro'
   -------------------------------------------------------------------------------------
 
     ---< NVIM-TREE >---

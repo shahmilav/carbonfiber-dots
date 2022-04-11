@@ -4,6 +4,7 @@ alias sys='btm -b'
 alias sortfiles='ls -a > sortfile.txt; sort sortfile.txt; rm sortfile.txt'
 alias bel='tput bel'
 alias rel='source ~/.zshrc'
+alias grep='grep --color=auto'
 
 ### LS ###
 alias ls='ls -GF'
