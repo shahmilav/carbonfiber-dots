@@ -7,7 +7,7 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
-  - ~/dev/darkside/alacritty/alacritty.yml
+  - ~/.config/alacritty/material_ocean.yml
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty itself.
@@ -109,7 +109,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Liga SFMono Nerd Font
+    family: SFMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Light
@@ -120,10 +120,10 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Liga SFMono Nerd Font
+    family: SFMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: Medium
+    style: Semibold
 
   # Italic font face
   italic:
@@ -131,7 +131,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Liga SFMono Nerd Font
+    family: SFMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Light Italic
@@ -142,13 +142,13 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Liga SFMono Nerd Font
+    family: SFMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: Medium Italic
+    style: Semibold Italic
 
   # Point size
-  size: 18.5
+  size: 20
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -708,33 +708,3 @@ cursor:
       #print_events: false
       # Highlight window damage information.
       #highlight_damage: false
-colors:
-  # Default colors
-  primary:
-    background: '#282c34'
-    foreground: '#abb2bf'
-
-  # Normal colors
-  normal:
-    # NOTE: Use '#131613' for the `black` color if you'd like to see
-    # black text on the background.
-    black: '#282c34'
-    red: '#e06c75'
-    green: '#98c379'
-    yellow: '#d19a66'
-    blue: '#61afef'
-    magenta: '#c678dd'
-    cyan: '#56b6c2'
-    white: '#abb2bf'
-
-  # Bright colors
-  bright:
-    black: '#5c6370'
-    red: '#e06c75'
-    green: '#98c379'
-    yellow: '#d19a66'
-    blue: '#61afef'
-    magenta: '#c678dd'
-    cyan: '#56b6c2'
-    white: '#ffffff'
-theme: One-Dark
