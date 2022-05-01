@@ -1,6 +1,6 @@
 ### GENERAL ###
 alias ip='curl -s ipinfo.io'
-alias sys='btm -b'
+alias sys='btop'
 alias sortfiles='ls -a > sortfile.txt; sort sortfile.txt; rm sortfile.txt'
 alias bel='tput bel'
 alias rel='source ~/.zshrc'
@@ -26,6 +26,8 @@ alias ga='git add'
 alias gc='git commit'
 alias gd='git diff'
 alias gs='git status'
+alias push='git push origin'
+alias pull='git pull origin'
 
 ### COMMON DIRECTORIES ###
 alias jag='cd ~/dev/jaguar'
@@ -41,6 +43,7 @@ alias mvnboot='mvn spring-boot:run'
 alias py='python3.10'
 alias moon='python3.10 ~/dev/moon-phases/moon_phase.py'
 alias picalc='python3.10 ~/dev/pi-thon-calc/calculator.py'
+alias math='python3.10 ~/dev/pi-math/math.py'
 
 ### HTML ###
 alias tidy='tidy -m --indent yes --tidy-mark no'
