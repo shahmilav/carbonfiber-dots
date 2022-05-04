@@ -13,6 +13,5 @@ Want the same look as the screenshot? Use the [Fira Code](https://github.com/ton
 * **Browser:** Firefox Nightly
 
 ## Current Setup
-* Material ocean for IntelliJ, iTerm, and Neovim
-*  font.
-* Custom vertical-tabs userChrome for Firefox
+* Nord for IntelliJ, iTerm, and Neovim
+* SF Mono Font
