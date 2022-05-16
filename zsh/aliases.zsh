@@ -18,7 +18,8 @@ alias ....='cd ../../../'
 alias .....='cd ../../../../'
 
 ### CONFIGURATION ###
-alias fishconf='cd ~/.config/fish/'
+alias zrc='$EDITOR ~/.zshrc'
+alias nvimconf='cd ~/.config/nvim/lua'
 
 ### GIT ###
 alias g='git'
@@ -36,6 +37,7 @@ alias conf='cd ~/.config'
 
 ### MAVEN ###
 alias mvnc='mvn clean'
+alias mvncom='mvn compile'
 alias mvncom='mvn clean compile'
 alias mvnboot='mvn spring-boot:run'
 

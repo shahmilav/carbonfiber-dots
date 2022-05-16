@@ -55,7 +55,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  decorations: buttonless
+  decorations: full
 
   # Background opacity
   #
@@ -244,30 +244,30 @@ cursor:
   thickness: 0.30
 
 colors:
-  # Default colors
+  name: Tomorrow (dark)
+  author: Chris Kempson
   primary:
-    background: '#2E3440'
-    foreground: '#D8DEE9'
-
-  # Normal colors
+    background: "#1d1f21"
+    foreground: "#c5c8c6"
+  cursor:
+    text: "#1d1f21"
+    cursor: "#c5c8c6"
   normal:
-    black: '#3B4252'
-    red: '#BF616A'
-    green: '#A3BE8C'
-    yellow: '#EBCB8B'
-    blue: '#81A1C1'
-    magenta: '#B48EAD'
-    cyan: '#88C0D0'
-    white: '#E5E9F0'
-
-  # Bright colors
+    black: "#1d1f21"
+    red: "#cc6666"
+    green: "#b5bd68"
+    yellow: "#f0c674"
+    blue: "#81a2be"
+    magenta: "#b294bb"
+    cyan: "#8abeb7"
+    white: "#c5c8c6"
   bright:
-    black: '#4C566A'
-    red: '#BF616A'
-    green: '#A3BE8C'
-    yellow: '#EBCB8B'
-    blue: '#81A1C1'
-    magenta: '#B48EAD'
-    cyan: '#8FBCBB'
-    white: '#ECEFF4'
-theme: Nord
+    black: "#969896"
+    red: "#cc6666"
+    green: "#b5bd68"
+    yellow: "#f0c674"
+    blue: "#81a2be"
+    magenta: "#b294bb"
+    cyan: "#8abeb7"
+    white: "#ffffff"
+theme: Tomorrow.dark

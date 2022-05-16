@@ -1,5 +1,3 @@
-echo "hi milav\n" | lolcat
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -23,6 +21,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 export HOMEBREW_NO_ENV_HINTS
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+test -r ~/.dir_colors && eval $(gdircolors ~/.dir_colors)
 
 source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

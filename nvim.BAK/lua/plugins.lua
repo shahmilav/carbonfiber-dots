@@ -17,11 +17,16 @@ Plug 'neoclide/coc.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'arcticicestudio/nord-vim'
+Plug 'navarasu/onedark.nvim'
 
 call plug#end()
 
-colorscheme nord
 ]]
+
+require('onedark').setup {
+    style = 'darker'
+}
+require('onedark').load() -- aka `vim.cmd [[ colorscheme onedarkpro ]]`
 
 require('plugin-config.treesitter')
 require('plugin-config.nvim-tree')
@@ -31,7 +36,7 @@ require('gitsigns').setup()
 
 require('lualine').setup {
     options = {
-        theme = 'nord'
+        theme = 'onedark'
     }
 }
 

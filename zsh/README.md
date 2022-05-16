@@ -1,4 +1,4 @@
-<h1 align="center">zsh configuration</h1>
+# zsh Config
 
 ## Table of Contents
 
