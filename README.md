@@ -5,10 +5,10 @@ Want the same look as the screenshot? Use the [Fira Code](https://github.com/ton
 
 * **Terminal:** iTerm2
 * **OS:** macOS btw
-* **Text Editor:** Neovim
+* **Text Editor:** Doom Emacs
 * **IDE:** IntelliJ
-* **System Monitor:** Bottom
-* **Colorscheme:** Nord or [darkside](https://github.com/shahmilav/darkside-iTerm2)
+* **System Monitor:** btop
+* **Colorscheme:** Nord 
 * **Font:** SF Mono
 * **Browser:** Firefox Nightly
 

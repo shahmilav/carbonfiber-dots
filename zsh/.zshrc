@@ -16,8 +16,6 @@ source $ZDOTDIR/defaults.zsh
 source $ZDOTDIR/iterm.zsh
 source $ZDOTDIR/path.zsh
 
-BASE16_SHELL="$HOME/.config/base16-shell/"
-
 export HOMEBREW_NO_ENV_HINTS
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

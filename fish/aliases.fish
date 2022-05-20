@@ -37,3 +37,7 @@ alias tidy='tidy -m --indent yes --tidy-mark no'
 alias ff="open -a 'Firefox Nightly'"
 alias st="open -a 'Sublime Text'"
 alias iterm="open -a 'iTerm'"
+alias mvim="open -a 'MacVim'"
+
+### OTHER ###
+alias bash="/opt/homebrew/bin/bash"
