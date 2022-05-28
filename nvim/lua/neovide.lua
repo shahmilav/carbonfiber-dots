@@ -1,3 +1,3 @@
 vim.cmd [[
-set guifont=SFMono\ Nerd\ Font:h19
+set guifont=SFMono\ Nerd\ Font:h16
 ]]

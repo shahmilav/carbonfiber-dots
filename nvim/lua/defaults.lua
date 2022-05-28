@@ -11,7 +11,7 @@ opt.mouse='a'
 opt.autoindent=true
 opt.incsearch=true
 opt.number = true
---vim.cmd 'set guicursor= '
+vim.cmd 'set guicursor= '
 
 vim.cmd [[
 set autoindent
@@ -20,5 +20,6 @@ set shiftwidth=2
 set smartindent
 set softtabstop=2
 set tabstop=2
+set autochdir
 highlight Comment cterm=italic gui=italic
 ]]

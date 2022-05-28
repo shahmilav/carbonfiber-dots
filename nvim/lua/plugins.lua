@@ -21,11 +21,13 @@ Plug 'navarasu/onedark.nvim'
 Plug 'https://github.com/RRethy/nvim-base16'
 Plug 'nickeb96/fish.vim'
 Plug 'https://github.com/romainl/flattened'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 call plug#end()
-
 ]]
 
-vim.cmd [[ colorscheme flattened_dark ]]
+vim.g.tokyonight_style="night"
+vim.g.tokyonight_sidebars = { "nvim-tree", "terminal", "vim-plug" }
+vim.cmd[[colorscheme nord]]
 
 require('plugin-config.treesitter')
 require('plugin-config.nvim-tree')
@@ -35,6 +37,6 @@ require('gitsigns').setup()
 
 require('lualine').setup {
   options = {
-    theme = 'solarized'
+    theme = 'nord'
   }
 }
