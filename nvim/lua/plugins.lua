@@ -1,42 +1,43 @@
--- This file can be loaded by calling `lua require('plugins')` from your
--- init.vim / init.lua
-vim.cmd [[
+return require('packer').startup(function()
+	
+	-- Packer can manage itself
+	use 'wbthomason/packer.nvim'
 
-call plug#begin()
+	-- Treesitter
+	use {
+		'nvim-treesitter/nvim-treesitter',
+		run = ':TSUpdate'
+	}
 
-Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'kyazdani42/nvim-tree.lua'
-Plug 'nvim-lualine/lualine.nvim'
-Plug 'kyazdani42/nvim-web-devicons'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'lewis6991/gitsigns.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'neoclide/coc.nvim'
-Plug 'neovim/nvim-lspconfig'
-Plug 'williamboman/nvim-lsp-installer'
-Plug 'arcticicestudio/nord-vim'
-Plug 'navarasu/onedark.nvim'
-Plug 'https://github.com/RRethy/nvim-base16'
-Plug 'nickeb96/fish.vim'
-Plug 'https://github.com/romainl/flattened'
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-call plug#end()
-]]
+	-- Telescope
+	use {
+		'nvim-telescope/telescope.nvim',
+		requires = { {'nvim-lua/plenary.nvim'} }
+	}
 
-vim.g.tokyonight_style="night"
-vim.g.tokyonight_sidebars = { "nvim-tree", "terminal", "vim-plug" }
-vim.cmd[[colorscheme nord]]
+	-- Colorscheme
+	use 'shaunsingh/nord.nvim'
+	use 'navarasu/onedark.nvim'
+	use 'https://gitlab.com/__tpb/monokai-pro.nvim'
 
-require('plugin-config.treesitter')
-require('plugin-config.nvim-tree')
-require('plugin-config.telescope')
-require('plugin-config.indent-blankline')
-require('gitsigns').setup()
+	-- Statusbar
+	use {
+		'nvim-lualine/lualine.nvim',
+		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+	}
 
-require('lualine').setup {
-  options = {
-    theme = 'nord'
-  }
-}
+	use {
+		'kyazdani42/nvim-tree.lua',
+		requires = {
+			'kyazdani42/nvim-web-devicons', -- optional, for file icon
+		},
+	}
+
+
+
+	require('configs.treesitter')
+	require('configs.colors')
+	require('configs.lualine')
+	require('configs.nvimtree')
+
+end)
