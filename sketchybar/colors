@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+# D R A C U L A
+BACKGROUND="#282a36"
+CURRENT_LINE="#44475a"
+FOREGROUND="#f8f8f2"	
+COMMENT="#6272a4"	
+CYAN="#8be9fd"
+GREEN="#50fa7b"
+ORANGE="#ffb86c"	
+PINK="#ff79c6"
+PURPLE="#bd93f9"	
+RED="#ff5555"
+YELLOW="#f1fa8c"
+
+# Dusk Fox (Rose Pine)
+
+BACKGROUND="#232136"
+FOREGROUND="#e0def4"
+COLOR0="#393552"
+COLOR1="#eb6f92"
+COLOR2="#a3be8c"
+COLOR3="#f6c177"
+COLOR4="#569fba"
+COLOR5="#c4a7e7"
+COLOR6="#9ccfd8"
+COLOR7="#e0def4"
+COLOR8="#47407d"
+COLOR9="#f083a2"
+COLOR10="#b1d196"
+COLOR11="#f9cb8c"
+COLOR12="#65b1cd"
+COLOR13="#ccb1ed"
+COLOR14="#a6dae3"
+COLOR15="#e2e0f7"

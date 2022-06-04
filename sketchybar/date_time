@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+# TODO: Just show Time; date on hover 
+
+# Colors
+source $HOME/.config/sketchybar/colors
+
+DATE='sketchybar -m --set date label="$(date "+%a %d. %b")"'
+
+TIME='sketchybar -m --set time label="$(date "+%H:%M")"'
+
+sketchybar -m --add item time right                     \
+              --set time update_freq=2                  \
+                label.padding_right=15                  \
+                label.color="0xFF${COLOR3:1}"           \
+                script="$TIME"                          \
+                                                        \
+             --add item date right                      \
+             --set date update_freq=60                  \
+               label.padding_right=15                   \
+               label.padding_left=15                    \
+               label.color="0xFF${COLOR3:1}"            \
+               script="$DATE"                           \
+                                                        \
+             --add bracket date_time                    \
+               time                                     \
+               date                                     \
+             --set date_time                            \
+               background.color="0x96${COLOR8:1}"       \
+               label.color="0xFF${COLOR3:1}"            \
+               background.corner_radius=4               \
+               background.height=24

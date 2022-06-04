@@ -1,0 +1,324 @@
+#!/bin/sh
+
+# ┌─┐┬┌─┌─┐┌┬┐┌─┐┬ ┬┬ ┬┌┐ ┌─┐┬─┐
+# └─┐├┴┐├┤  │ │  ├─┤└┬┘├┴┐├─┤├┬┘
+# └─┘┴ ┴└─┘ ┴ └─┘┴ ┴ ┴ └─┘┴ ┴┴└─
+
+# P A T H S
+  # export PATH="$HOME/.cache/wal:$PATH"
+
+# P Y W A L 
+  # source colors.sh
+
+# V A R I A B L E S
+  # NOTE: Exporting Directory Didn't work for some reason
+  # PLUGINS_DIR="$HOME/.config/sketchybar/plugins"
+  # HOMEBREW_PYTHON="/opt/homebrew/bin/python3"
+
+# D R A C U L A
+  BACKGROUND="#282a36"
+  CURRENT_LINE="#44475a"
+  FOREGROUND="#f8f8f2"	
+  COMMENT="#6272a4"	
+  CYAN="#8be9fd"
+  GREEN="#50fa7b"
+  ORANGE="#ffb86c"	
+  PINK="#ff79c6"
+  PURPLE="#bd93f9"	
+  RED="#ff5555"
+  YELLOW="#f1fa8c"
+
+# B A R  C O N F I G
+  sketchybar -m --bar                                             \
+    position=top                                                  \
+    height=39                                                     \
+    margin=0                                                      \
+    y_offset=0                                                    \
+    corner_radius=0                                               \
+    border_width=0                                                \
+    border_color="0xFF${CURRENT_LINE:1}"                          \
+    blur_radius=0                                                 \
+    padding_left=0                                                \
+    padding_right=0                                               \
+    color="0xFF000000"                                            \
+    display=all                                                   \
+    hidden=off                                                    \
+    topmost=off                                                   \
+    font_smoothing=off                                            \
+    shadow=off
+
+# D E F A U L T S
+  # LABELS
+    sketchybar -m --default                                       \
+      label.font="VictorMono Nerd Font:Bold:16.0"                 \
+      label.color="0xFF${COMMENT:1}"                              \
+      label.highlight_color="0xFF${CYAN:1}"                       \
+      label.padding_left=2                                        \
+      label.padding_right=4                  
+
+  # ICONS
+    sketchybar -m --default                                       \
+      icon.font="VictorMono Nerd Font:Bold:18.0"                  \
+      icon.color="0x46${PURPLE:1}"                                \
+      icon.highlight_color="0xFF${RED:1}"                         \
+      icon.padding_right=0                                        \
+      icon.padding_left=0                     
+
+  # BACKGROUNDS
+    sketchybar -m --default                                       \
+      background.height=32                                        \
+      background.border_color="0xFF${GREEN:1}"                    \
+      background.border_width=0                                   \
+      background.corner_radius=0                                  \
+      background.color="0xFF${PINK:1}"                            \
+      background.drawing=on                                       \
+
+  # MISC
+    sketchybar -m --default                                       \
+      y_offset=2                                                  \
+      drawing=on                                                  \
+      # update_freq=                                              \
+      # cache_scripts=                                            \
+      # updates=                                                  \
+      # lazy=                      
+
+# E V E N T S
+  # sketchybar -m add event song_update com.apple.Music.playerInfo
+  # sketchybar -m add event window_focus
+  # sketchybar -m add event title_change
+
+# M O D A L  I N D I C A T O R
+sketchybar -m                                                     \
+  --add item modal_indicator left                                 \
+  --set modal_indicator                                           \
+  background.color="0x00${PURPLE:1}"                              \
+  icon="N"                                                        \
+  background.padding_left=12                                      \
+  icon.padding_left=10                                            \
+  icon.padding_right=6                                            \
+  icon.font="VictorMono Nerd Font:Bold:18.0"                      \
+  y_offset=0                                                      \
+  background.padding_right=10                                     \
+  script="$HOME/.config/sketchybar/plugins/modal_indicator.sh"    \
+  --subscribe modal_indicator mouse.entered
+
+# S P A C E S
+sketchybar -m                                                     \
+  --add space home left                                           \
+  --set home                                                      \
+  associated_space=1                                              \
+  associated_display=1                                            \
+  icon.padding_left=10                                            \
+  icon.padding_right=4                                            \
+  icon="ﮟ"                                                        \
+  background.color="0x00${PURPLE:1}"                              \
+  click_script="yabai -m space --focus 1"                         \
+                                                                  \
+  --add space comms left                                          \
+  --set comms                                                     \
+  associated_space=2                                              \
+  associated_display=1                                            \
+  icon.padding_right=4                                            \
+  icon=                                                          \
+  background.color="0x00${PURPLE:1}"                              \
+  click_script="yabai -m space --focus 2"                         \
+                                                                  \
+  --add space music left                                          \
+  --set music                                                     \
+  associated_space=3                                              \
+  associated_display=1                                            \
+  icon.padding_right=4                                            \
+  icon=                                                          \
+  background.color="0x00${PURPLE:1}"                              \
+  click_script="yabai -m space --focus 3"                         \
+                                                                  \
+  --add space invest left                                         \
+  --set invest                                                    \
+  associated_space=4                                              \
+  associated_display=1                                            \
+  icon.padding_right=4                                            \
+  icon=                                                          \
+  background.color="0x00${PURPLE:1}"                              \
+  click_script="yabai -m space --focus 4"                         \
+                                                                  \
+  --add space misc left                                           \
+  --set misc                                                      \
+  associated_space=5                                              \
+  associated_display=1                                            \
+  icon=                                                          \
+  icon.padding_right=0                                            \
+  background.color="0x00${PURPLE:1}"                              \
+  click_script="yabai -m space --focus 5"                         \
+  #                                                                    \
+  #     --add component bracket primary_spaces                         \
+  #         home comms music invest misc                               \
+  #     --set primary_spaces                                           \
+  #         background_color="0xAB${background:1}"
+
+# T I T L E
+# sketchybar -m batch                                                \
+#     --add item title left                                          \
+#     --set title                                                    \
+#         icon=""                                                    \
+#         icon_color="0xFF${cursor:1}"                               \
+#         icon_padding_left=10                                       \
+#         icon_padding_right=6                                       \
+#         icon_font="Iosevka Nerd Font Mono:Bold:18.0"               \
+#         y_offset=0                                                 \
+#         background_padding_left=14                                 \
+#         script="$PLUGINS_DIR/window_title.sh"                      \
+#     --subscribe title                                              \
+#         window_focus                                               \
+#         front_app_switched                                         \
+#         space_change                                               \
+#         title_change                                               \
+#                                                                    \
+#     --add item stack_indicator left                                \
+#     --set stack_indicator                                          \
+#         script="$PLUGINS_DIR/stack.sh"                             \
+#         label_padding_left=4                                       \
+#         label_padding_right=8                                      \
+#         y_offset=0                                                 \
+#     --subscribe stack_indicator                                    \
+#         window_focus                                               \
+#         front_app_switched                                         \
+#         space_change                                               \
+#         title_change                                               \
+#                                                                    \
+#     --add component bracket window_information                     \
+#         title stack_indicator                                      \
+#     --set window_information                                       \
+#         background_color="0xAB${background:1}"
+
+# P L U G I N S
+# sketchybar -m batch                                                \
+#     --add item battery right                                       \
+#     --set battery                                                  \
+#         update_freq=10                                             \
+#         script="$PLUGINS_DIR/power.sh"                             \
+#         label_padding_right=10                                     \
+#         icon_padding_left=10                                       \
+#         icon_padding_right=2                                       \
+#         label_font="Iosevka Nerd Font Mono:Bold:16.0"              \
+#         icon_font="Iosevka Nerd Font Mono:Bold:18.0"               \
+#         y_offset=1                                                 \
+#         background_color="0xAB${background:1}"                     \
+#         background_padding_left=10                                 \
+#                                                                    \
+#     --add item clock right                                         \
+#     --set clock                                                    \
+#         icon=                                                     \
+#         update_freq=5                                              \
+#         y_offset=1                                                 \
+#         icon_padding_left=10                                       \
+#         icon_padding_right=2                                       \
+#         label_padding_right=10                                     \
+#         background_color="0xAB${background:1}"                     \
+#         script="$PLUGINS_DIR/clock.sh"                             \
+#         background_padding_left=10                                 \
+#                                                                    \
+#     --add item date right                                          \
+#     --set date                                                     \
+#         icon=                                                     \
+#         update_freq=5                                              \
+#         y_offset=1                                                 \
+#         icon_padding_left=10                                       \
+#         icon_padding_right=2                                       \
+#         label_padding_right=10                                     \
+#         background_color="0xAB${background:1}"                     \
+#         script="$PLUGINS_DIR/date.sh"                              \
+#         background_padding_left=10                                 \
+#                                                                    \
+#     --add item reminders right                                     \
+#     --set reminders                                                \
+#         update_freq=20                                             \
+#         y_offset=1                                                 \
+#         icon_padding_left=10                                       \
+#         icon_padding_right=2                                       \
+#         label_padding_right=10                                     \
+#         background_color="0xAB${background:1}"                     \
+#         background_padding_left=10                                 \
+#         script="$PLUGINS_DIR/reminders.sh"                         \
+#         click_script="$PLUGINS_DIR/reminders_click.sh"             \
+#                                                                    \
+#     --add item btc right                                           \
+#     --set btc                                                      \
+#         update_freq=20                                             \
+#         icon=                                                     \
+#         y_offset=1                                                 \
+#         icon_padding_left=10                                       \
+#         icon_padding_right=2                                       \
+#         label_padding_right=10                                     \
+#         script="$HOMEBREW_PYTHON $PLUGINS_DIR/btc.py"              \
+#                                                                    \
+#     --add item eth right                                           \
+#     --set eth                                                      \
+#         update_freq=20                                             \
+#         icon=ﲹ                                                     \
+#         y_offset=1                                                 \
+#         icon_padding_left=10                                       \
+#         icon_padding_right=2                                       \
+#         label_padding_right=2                                      \
+#         script="$HOMEBREW_PYTHON $PLUGINS_DIR/eth.py"              \
+#         icon_font="Iosevka Nerd Font Mono:Bold:18.0"               \
+#                                                                    \
+#     --add item vti right                                           \
+#     --set vti                                                      \
+#         update_freq=20                                             \
+#         icon=VTI                                                   \
+#         y_offset=1                                                 \
+#         icon_padding_left=10                                       \
+#         icon_padding_right=2                                       \
+#         label_padding_right=2                                      \
+#         script="$PLUGINS_DIR/vti.sh"                               \
+#         icon_font="Iosevka Nerd Font Mono:Bold:18.0"               \
+#                                                                    \
+#     --add component bracket investments                            \
+#         btc eth vti                                                \
+#     --set investments                                              \
+#         background_color="0xAB${background:1}"                     \
+#                                                                    \
+#     --add item mic right                                           \
+#     --set mic                                                      \
+#         update_freq=20                                             \
+#         drawing=off                                                \
+#         y_offset=1                                                 \
+#         icon_padding_left=10                                       \
+#         icon_padding_right=2                                       \
+#         label_padding_right=2                                      \
+#         script="$PLUGINS_DIR/mic.sh"                               \
+#         click_script="$PLUGINS_DIR/mic_click.sh"                   \
+#         icon_font="Iosevka Nerd Font Mono:Bold:18.0"               \
+#                                                                    \
+#     --add item vpn right                                           \
+#     --set vpn                                                      \
+#         update_freq=20                                             \
+#         icon=                                                     \
+#         drawing=off                                                \
+#         y_offset=1                                                 \
+#         icon_padding_left=10                                       \
+#         icon_padding_right=2                                       \
+#         label_padding_right=8                                      \
+#         script="$PLUGINS_DIR/vpn.sh"                               \
+#         icon_font="Iosevka Nerd Font Mono:Bold:18.0"               \
+#         background_color="0xAB${background:1}"                     \
+#         background_padding_right=10                                \
+#                                                                    \
+#     --add item music_info right                                    \
+#     --set music_info                                               \
+#         y_offset=1                                                 \
+#         icon_padding_left=10                                       \
+#         icon_padding_right=2                                       \
+#         label_padding_right=8                                      \
+#         script="$PLUGINS_DIR/music.sh"                             \
+#         click_script="$PLUGINS_DIR/music_click.sh"                 \
+#         icon_font="Iosevka Nerd Font Mono:Bold:30.0"               \
+#         background_color="0xAB${background:1}"                     \
+#         background_padding_right=10                                \
+#         drawing=off                                                \
+#     --subscribe music_info                                         \
+#         song_update                               
+
+# D O N E
+sketchybar -m --update
+echo "sketchybar configuration loaded"

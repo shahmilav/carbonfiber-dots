@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+MARKET_START=0930
+MARKET_END=1600
+DAY=$(date +%u)
+CURRENT_TIME=$(date +%H%M)
+
+if [[ $CURRENT_TIME -lt $MARKET_START || 
+  $CURRENT_TIME -gt $MARKET_END || 
+  $DAY -gt 5 ]]; then
+  # TODO: See new documentation to ensure drawing is what I want.
+  sketchybar -m --set vti drawing off
+  exit 0
+fi
+
+QUOTES=$(ticker VTI ETH-USD BTC-USD | sed -E -e 's/.*\((.*)\).*/\1/g')
+VTI=
+# ETH=$(ticker ETH-USD | sed -E -e 's/.*\((.*)\).*/\1/g')
+# BTC=$(ticker BTC-USD | sed -E -e 's/.*\((.*)\).*/\1/g')
+
+

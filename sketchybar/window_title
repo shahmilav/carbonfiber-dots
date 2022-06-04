@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+# Colors
+source $HOME/.config/sketchybar/colors
+
+SCRIPT='
+WINDOW_TITLE=$(/opt/homebrew/bin/yabai -m query --windows --window | jq -r ".title")
+
+if [[ $WINDOW_TITLE = "" ]]; then
+  WINDOW_TITLE=$(/opt/homebrew/bin/yabai -m query --windows --window | jq -r ".app")
+fi
+
+if [[ ${#WINDOW_TITLE} -gt 50 ]]; then
+  WINDOW_TITLE=$(echo "$WINDOW_TITLE" | cut -c 1-50)
+  sketchybar -m --set title label="$WINDOW_TITLE"…
+  exit 0
+fi
+
+sketchybar -m --set title label="$WINDOW_TITLE"
+'
+
+# E V E N T S
+sketchybar -m --add event yabai_window
+
+# W I N D O W  T I T L E 
+sketchybar -m --add item title left                      \
+              --subscribe title yabai_window             \
+              --set title script="$SCRIPT"               \
+                label.color="0xFF${COLOR3:1}"             \
+                icon.padding_left=15                     \
+                label.padding_right=15                   \
+                background.padding_left=20               \
+                background.color="0x96${COLOR8:1}" \
+                background.corner_radius=4               \
+                background.height=24
+

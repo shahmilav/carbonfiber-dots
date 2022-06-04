@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+
+# Colors
+source $HOME/.config/sketchybar/colors
+
+# S P A C E S
+sketchybar -m                                   \
+  --add space home left                         \
+  --set home                                    \
+    associated_space=1                          \
+    background.padding_left=15                  \
+    icon.padding_left=15                        \
+    icon.padding_right=15                       \
+    icon.highlight_color="0xFF${COLOR3:1}"      \
+    icon=ﮟ                                      \
+    icon.color="0xFF${COLOR5:1}"                \
+    click_script="yabai -m space --focus 1"     \
+                                                \
+  --add space comms left                        \
+    --set comms                                 \
+    associated_space=2                          \
+    icon.padding_right=15                       \
+    icon=                                      \
+    y_offset=-1                                 \
+    icon.color="0xFF${COLOR5:1}"                \
+    icon.highlight_color="0xFF${COLOR4:1}"      \
+    click_script="yabai -m space --focus 2"     \
+                                                \
+  --add space music left                        \
+  --set music                                   \
+    associated_space=3                          \
+    icon.padding_right=15                       \
+    y_offset=-1                                 \
+    icon=                                      \
+    icon.highlight_color="0xFF${COLOR4:1}"      \
+    icon.color="0xFF${COLOR5:1}"                \
+    click_script="yabai -m space --focus 3"     \
+                                                \
+  --add space invest left                       \
+  --set invest                                  \
+    associated_space=4                          \
+    icon.padding_right=15                       \
+    icon=                                      \
+    icon.highlight_color="0xFF${COLOR4:1}"      \
+    icon.color="0xFF${COLOR5:1}"                \
+    click_script="yabai -m space --focus 4"     \
+                                                \
+  --add space misc left                         \
+  --set misc                                    \
+    associated_space=5                          \
+    icon=                                      \
+    icon.padding_right=15                       \
+    icon.highlight_color="0xFF${COLOR4:1}"      \
+    icon.color="0xFF${COLOR5:1}"                \
+    click_script="yabai -m space --focus 5"     \
+                                                \
+  --add bracket primary_spaces                  \
+    home                                        \
+    comms                                       \
+    music                                       \
+    invest                                      \
+    misc                                        \
+                                                \
+  --set primary_spaces                          \
+  background.color="0x96${COLOR8:1}"            \
+  background.corner_radius=4                    \
+  background.height=24

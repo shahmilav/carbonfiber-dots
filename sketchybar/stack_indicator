@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+
+# TODO: Maybe change yabai active window border color when in a stack
+# TODO: Add Stack Icon
+
+# Colors
+source $HOME/.config/sketchybar/colors
+
+SCRIPT='
+# Exit if Not in Stack
+CURRENT=$(yabai -m query --windows --window | jq -r ".[\"stack-index\"]")
+if [[ $CURRENT -eq 0 ]]; then
+  sketchybar -m --set stack label="" \
+                --set stack drawing=off
+  exit 0
+fi
+
+# Use Numbers in place of Dots if the Stack is greater than 3
+# Use a larger font for the unicode dots
+LAST=$(yabai -m query --windows --window stack.last | jq -r ."[\"stack-index\"]")
+if [[ $LAST -gt 3 ]]; then
+  sketchybar -m --set stack label.font="VictorMono Nerd Font:Bold:16.0" \
+                --set stack label=$(printf "[%s/%s]" "$CURRENT" "$LAST") \
+                --set stack drawing=on
+  exit 0
+else
+  sketchybar -m --set stack label.font="VictorMono Nerd Font:Bold:22.0"
+fi
+
+# Create Stack Indicator
+declare -a dots=()
+for i in $(seq 0 $(expr $LAST - 1))
+do  
+  # Theme 1
+  # if [[ $i -lt $(expr $CURRENT - 1) ]]; then
+    # dots+="◖"
+  # elif [[ $i -gt $(expr $CURRENT - 1) ]]; then
+    # dots+="◗"
+  # elif [[ $i -eq $(expr $CURRENT - 1) ]]; then
+    # dots+="●"
+  # fi
+  # Theme 2
+  [[ $( expr $CURRENT - 1) -eq $i ]] && dots+="●" || dots+="○"
+done
+
+# Display Indicator
+sketchybar -m --set stack label=$(printf "%s" ${dots[@]}) \
+              --set stack drawing=on
+'
+
+# S T A C K  I N D I C A T O R 
+sketchybar -m --add item stack left                      \
+              --set stack script="$SCRIPT"               \
+              --subscribe stack window_focus             \
+                yabai_window                             \
+                front_app_switched                       \
+                space_change                             \
+                title_change                             \
+              --set stack drawing=off                    \
+                stack update_freq=0                      \
+                label.color="0xFF${COLOR3:1}"             \
+                label.padding_left=10                    \
+                label.padding_right=12                   \
+                background.padding_left=15               \
+                background.color="0x96${COLOR8:1}" \
+                background.corner_radius=4               \
+                background.height=24                     \
+                label.y_offset=2

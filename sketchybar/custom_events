@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# NOTE: You could use this as a terminal alias in zshrc and skhdrc to trigger events whenever yabai commands are run. This is probably overkill for me right now
+# yabai() {
+#     command yabai "$@"
+#     sketchybar -m --trigger yabai_command_run >/dev/null 2>/dev/null &disown
+# }
+
+sketchybar --add event yabai_window

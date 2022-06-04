@@ -1,103 +1,33 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
-ITEM_DIR="$HOME/.config/sketchybar/items" # Directory where the items are configured
-PLUGIN_DIR="$HOME/.config/sketchybar/plugins" # Directory where all the plugin scripts are stored
+#TODO: File issue about why 24 background height on modal indicator works but 25 doesn't
 
-LOADING=􀖇 # Icon displayed while an item is still initializing
-PADDINGS=3 # All paddings use this value (icon, label, background and bar paddings)
-FONT="SF Pro" # Needs to have Regular, Bold, Semibold, Heavy and Black variants
-BAR_COLOR=0x22e1e3e4 # Black bar
-ICON_COLOR=0xffe1e3e4 # Color of all icons
-LABEL_COLOR=0xffe1e3e4 # Color of all labels
-CONTRAST_COLOR=$ICON_COLOR #0xff2a2f38 # The color of elements in front of a background
-SPACE_CLICK_SCRIPT="yabai -m space --focus \$SID" # The script that is run for clicking on space components
+# I N I T 
+  # Custom Events
+    sh ~/.config/sketchybar/custom_events
+  # Defaults
+    sh ~/.config/sketchybar/defaults
 
-SEGMENT_HEIGHT=28 # The height of the segments
-SEGMENT_SPACING=13 # The spacing between the segments
-SEGMENT_BORDER_WIDTH=0 # Width of the borders for segments
-SEGMENT_BACKGROUND_COLOR=0x00000000 # The background color for segments
-SEGMENT_BACKGROUND_HIGHLIGHT_COLOR=$SEGMENT_BACKGROUND_COLOR # 0xffe1e3e4 # The background highlight color for segments (borders, etc)
-CORNER_RADIUS=4 # Roundness of the segments
+# L E F T
+  # Modal Indicator
+    sh ~/.config/sketchybar/modal
+  # Spaces
+    sh ~/.config/sketchybar/spaces
+  # Window Title
+    sh ~/.config/sketchybar/window_title
+  # Stack Indicator
+    sh ~/.config/sketchybar/stack_indicator
 
-POPUP_BACKGROUND_COLOR=$BAR_COLOR
-POPUP_BORDER_COLOR=0xff9dd274
-POPUP_BORDER_WIDTH=2
-POPUP_CORNER_RADIUS=4
+# R I G H T
+  # Battery
+    sh ~/.config/sketchybar/battery
+  # Date & Clock
+    sh ~/.config/sketchybar/date_time
+  # Investments
+    # sh ~/.config/sketchybar/investments
 
-HAS_BATTERY=$(if [ "$(pmset -g batt | grep "Battery")" = "" ]; then echo "false"; else echo "true"; fi)
+# U P D A T E  B A R
+  sketchybar --update
 
-sketchybar --bar                height=32                                                         \
-                                corner_radius=0                                                   \
-                                border_width=0                                                    \
-                                margin=0                                                          \
-                                blur_radius=30                                                    \
-                                position=top                                                      \
-                                padding_left=5                                                    \
-                                padding_right=5                                                   \
-                                color=$BAR_COLOR                                                  \
-                                topmost=off                                                       \
-                                font_smoothing=off                                                \
-                                y_offset=0                                                        \
-                                                                                                  \
-           --default            drawing=on                                                        \
-                                lazy=off                                                          \
-                                updates=when_shown                                                \
-                                cache_scripts=on                                                  \
-                                label.font="$FONT:Semibold:13.0"                                  \
-                                icon.font="$FONT:Bold:14.0"                                       \
-                                icon.color=$ICON_COLOR                                            \
-                                label.color=$LABEL_COLOR                                          \
-                                icon.padding_left=$PADDINGS                                       \
-                                icon.padding_right=$PADDINGS                                      \
-                                label.padding_left=$PADDINGS                                      \
-                                label.padding_right=$PADDINGS                                     \
-                                background.padding_right=$PADDINGS                                \
-                                background.padding_left=$PADDINGS                                 \
-                                background.color=$SEGMENT_BACKGROUND_COLOR                        \
-                                background.border_color=$SEGMENT_BACKGROUND_HIGHLIGHT_COLOR       \
-                                background.border_width=$SEGMENT_BORDER_WIDTH                     \
-                                background.height=$SEGMENT_HEIGHT                                 \
-                                background.corner_radius=$CORNER_RADIUS                           \
-                                background.drawing=off                                            \
-                                icon.background.height=$SEGMENT_HEIGHT                            \
-                                icon.background.color=$SEGMENT_BACKGROUND_HIGHLIGHT_COLOR         \
-                                icon.background.corner_radius=$CORNER_RADIUS                      \
-                                icon.background.drawing=off                                       \
-                                label.background.color=$SEGMENT_BACKGROUND_HIGHLIGHT_COLOR        \
-                                label.background.border_width=$SEGMENT_BORDER_WIDTH               \
-                                label.background.border_color=$SEGMENT_BACKGROUND_HIGHLIGHT_COLOR \
-                                label.background.height=$SEGMENT_HEIGHT                           \
-                                label.background.corner_radius=$CORNER_RADIUS                     \
-                                label.background.drawing=off                                      \
-                                popup.background.border_width=$POPUP_BORDER_WIDTH                 \
-                                popup.background.corner_radius=$POPUP_CORNER_RADIUS               \
-                                popup.background.border_color=$POPUP_BORDER_COLOR                 \
-                                popup.background.color=$POPUP_BACKGROUND_COLOR                    \
-                                                                                                  \
-           --add item           label_template left                                               \
-           --set label_template icon.drawing=off                                                  \
-                                label.font="$FONT:Black:12.0"                                     \
-                                label.background.drawing=on                                       \
-                                label.color=$CONTRAST_COLOR                                       \
-                                label.padding_right=5                                             \
-                                label.background.height=$SEGMENT_HEIGHT                           \
-                                click_script="$PLUGIN_DIR/toggle_bracket.sh"                      \
-                                background.padding_left=$SEGMENT_SPACING                          \
-                                background.padding_right=0                                        \
-                                drawing=off
-
-source "$ITEM_DIR/apple.sh"
-source "$ITEM_DIR/system.sh"
-source "$ITEM_DIR/spaces.sh"
-source "$ITEM_DIR/github.sh"
-source "$ITEM_DIR/network.sh"
-source "$ITEM_DIR/memory.sh"
-
-source "$ITEM_DIR/calendar.sh"
-source "$ITEM_DIR/cpu.sh"
-source "$ITEM_DIR/spotify.sh"
-
-############## FINALIZING THE SETUP ##############
-sketchybar --update
-
-echo "sketchybar configuration loaded.."
+# F I N I S H 
+echo "Sketchybar Loaded..."
