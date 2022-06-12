@@ -15,7 +15,7 @@ return require('packer').startup(function()
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
-	-- Colorscheme
+	-- Colorschemes
 	use 'shaunsingh/nord.nvim'
 	use 'navarasu/onedark.nvim'
 	use 'https://gitlab.com/__tpb/monokai-pro.nvim'
@@ -35,6 +35,7 @@ return require('packer').startup(function()
 
 
 
+	-- external configs for plugins
 	require('configs.treesitter')
 	require('configs.colors')
 	require('configs.lualine')
