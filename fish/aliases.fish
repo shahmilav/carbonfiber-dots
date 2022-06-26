@@ -1,6 +1,6 @@
 ### GENERAL ###
 alias ip='curl -s ipinfo.io'
-alias sys='btm -b'
+alias sys='btop'
 alias sortfiles='ls -a > sortfile.txt; sort sortfile.txt; rm sortfile.txt'
 abbr -a -g bel tput bel
 alias rel='source ~/.config/fish/config.fish'

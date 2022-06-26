@@ -19,6 +19,8 @@ return require('packer').startup(function()
 	use 'shaunsingh/nord.nvim'
 	use 'navarasu/onedark.nvim'
 	use 'https://gitlab.com/__tpb/monokai-pro.nvim'
+	use 'folke/tokyonight.nvim'
+	use 'arzg/vim-colors-xcode'
 
 	-- Statusbar
 	use {
@@ -33,6 +35,9 @@ return require('packer').startup(function()
 		},
 	}
 
+	-- Language support 
+	use 'https://github.com/dag/vim-fish'
+	use 'https://github.com/arzg/vim-swift'
 
 
 	-- external configs for plugins

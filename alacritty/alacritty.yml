@@ -806,36 +806,35 @@ font:
     # Highlight window damage information.
     #highlight_damage: false
 colors:
-  name: TokyoNight Night
-  author: Folke
   # Default colors
   primary:
-    background: '0x1a1b26'
-    foreground: '0xc0caf5'
+    background: '#1b2b34'
+    foreground: '#d8dee9'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '#1b2b34'
+    cursor: '#ffffff'
 
   # Normal colors
   normal:
-    black: '0x15161E'
-    red: '0xf7768e'
-    green: '0x9ece6a'
-    yellow: '0xe0af68'
-    blue: '0x7aa2f7'
-    magenta: '0xbb9af7'
-    cyan: '0x7dcfff'
-    white: '0xa9b1d6'
+    black: '#343d46'
+    red: '#EC5f67'
+    green: '#99C794'
+    yellow: '#FAC863'
+    blue: '#6699cc'
+    magenta: '#c594c5'
+    cyan: '#5fb3b3'
+    white: '#d8dee9'
 
   # Bright colors
   bright:
-    black: '0x414868'
-    red: '0xf7768e'
-    green: '0x9ece6a'
-    yellow: '0xe0af68'
-    blue: '0x7aa2f7'
-    magenta: '0xbb9af7'
-    cyan: '0x7dcfff'
-    white: '0xc0caf5'
-
-  indexed_colors:
-    - { index: 16, color: '0xff9e64' }
-    - { index: 17, color: '0xdb4b4b' }
-theme: Tokyonight_Night
+    black: '#343d46'
+    red: '#EC5f67'
+    green: '#99C794'
+    yellow: '#FAC863'
+    blue: '#6699cc'
+    magenta: '#c594c5'
+    cyan: '#5fb3b3'
+    white: '#d8dee9'
+theme: Oceanic-Next
