@@ -1,7 +1,8 @@
 # milav's dotfiles
 
-![Screenshot](images/setup-2022-02-01.png)
-Want the same look as the screenshot? Use the [Fira Code](https://github.com/tonsky/FiraCode) font and the [darkside](https://github.com/shahmilav/darkside-iTerm2) color scheme.
+![Screenshot](./images/cmatrix+pipes.png)
+![Screenshot](./images/nvim+btop.png)
+![Screenshot](./images/macchina.png)
 
 * **Terminal:** iTerm2
 * **OS:** macOS btw
@@ -13,5 +14,5 @@ Want the same look as the screenshot? Use the [Fira Code](https://github.com/ton
 * **Browser:** Firefox Nightly
 
 ## Current Setup
-* Nord for IntelliJ, iTerm, and Neovim
+* for IntelliJ, iTerm, and Neovim
 * SF Mono Font
