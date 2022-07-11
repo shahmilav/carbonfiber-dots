@@ -12,7 +12,3 @@
 * **Colorscheme:** Nord 
 * **Font:** SF Mono
 * **Browser:** Firefox Nightly
-
-## Current Setup
-* for IntelliJ, iTerm, and Neovim
-* SF Mono Font
