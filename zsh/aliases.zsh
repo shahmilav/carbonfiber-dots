@@ -49,6 +49,7 @@ alias math='python3.10 ~/dev/pi-math/math.py'
 
 ### HTML ###
 alias tidy='tidy -m --indent yes --tidy-mark no'
+alias prettier='npx prettier'
 
 ### OPENING APPS ###
 alias ff="open -a 'Firefox Nightly'"

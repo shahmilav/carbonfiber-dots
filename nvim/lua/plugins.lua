@@ -1,5 +1,5 @@
 return require('packer').startup(function()
-	
+
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 
@@ -20,7 +20,8 @@ return require('packer').startup(function()
 	use 'navarasu/onedark.nvim'
 	use 'https://gitlab.com/__tpb/monokai-pro.nvim'
 	use 'folke/tokyonight.nvim'
-	use 'arzg/vim-colors-xcode'
+	use 'ishan9299/modus-theme-vim'
+	use 'https://github.com/Rigellute/rigel'
 
 	-- Statusbar
 	use {

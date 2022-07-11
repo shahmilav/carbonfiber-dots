@@ -1,0 +1,444 @@
+cd
+ls
+jag
+dev
+pwd
+cd
+ls
+pwd
+jag
+pwd
+ls
+nvim
+jag
+conf
+bat alacritty/nord-alacritty.yml
+..
+conf
+gd
+gs
+cd
+ls
+jag
+[wd
+jag
+push master
+pull master
+bye
+jag
+alacritty --config-file=~/.config/alacritty/darkside.yml &
+conf
+ls
+cd alacritty
+ls
+alacritty --config-file=darkside.yml &
+jag
+cd
+pwd
+alacritty
+cd
+ls
+jag
+mvnc
+nvim .config/alacritty
+ls
+pwd
+jag
+mvnc
+whoami
+bash
+conf
+nvim alacritty/hacker.yml
+cd alacritty
+mv alacritty.yml clean.yml
+mv hacker.yml alacritty.yml
+cd
+ls
+jag
+dev
+pwd
+conf
+nvim alacritty/alacritty.yml
+ls
+pwd
+jag
+dev
+ls
+dev
+cd
+ls
+pwd
+jag
+dev
+cd
+jag
+ls
+mvnc
+mvn clean
+bye
+conf
+cd alacritty
+alacritty --config-file=clean.yml
+ls
+dev
+cd
+cd
+dev
+ls
+alacritty --config-file=clean.yml
+alacritty
+cd
+pwd
+jag
+dev
+jag
+neofetch
+cd
+dev
+jag
+mvnc
+ls
+pwd
+jag
+neofetch
+zrc
+nvimconf
+cd plugins/configs
+..
+nvim init.lua
+nvim init.lua
+nvim init.lua
+cd
+ls
+jag
+mvnc
+sys
+ls
+nvim init.lua
+nvim init.lua
+nvim init.lua
+\_(@.@)_/
+cd
+jag
+mvnc
+git status
+cd
+dev
+..
+ls
+dev
+cd
+ls
+dev
+ls
+rm -r jaguar-login
+cd ~/dev/jaguar
+cd
+pwd
+cd
+zrc
+za
+ls
+nvim config-alias.zsh
+zrc
+nvimconf
+ls
+cd custom
+ls
+bat init.lua
+bat chadrc.lua
+nvim init.lua
+nvim ../plugins/init.lua
+nvimplug
+echo $TERM
+nvimconf
+nvimplug
+256color
+cd
+nvim .tmux.conf
+ll | grep .tmux
+ll
+ll -A | grep tmux
+ll -A
+rm .tmux.conf
+nvim .tmux.conf
+nvimplug
+cd
+ls
+tmux
+jag
+mvnc
+mvncom
+mvnc
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+ls
+cd
+nvim .tmux.conf
+tmux source ~/.tmux.conf
+nvim .tmux.conf
+tmux source ~/.tmux.conf
+git clone https://github.com/edouard-lopez/tmux-tomorrow ~/.tmux/themes
+nvim .tmux.conf
+ls
+pwd
+jag
+jag
+neofetch
+ls
+dev
+nvim ~/.tmux.conf
+truecolors
+truecolors
+mvn clean
+cd
+ls
+jag
+dev
+cd
+la
+ls
+conf
+cd alacritty
+ls
+mv alacritty.yml tomorrow-night.yml
+mv nord-alacritty.yml alacritty.yml
+mv alacritty.yml nord.yml 
+mv tomorrow-night.yml alacritty.yml
+cd
+jag
+zrc
+cd
+tmux -V
+echo $TERM
+nvim ~/.tmux.conf
+awk 'BEGIN{\
+    s="/\\/\\/\\/\\/\\"; s=s s s s s s s s;\
+    for (colnum = 0; colnum<77; colnum++) {\
+        r = 255-(colnum*255/76);\
+        g = (colnum*510/76);\
+        b = (colnum*255/76);\
+        if (g>255) g = 510-g;\
+        printf "\033[48;2;%d;%d;%dm", r,g,b;\
+        printf "\033[38;2;%d;%d;%dm", 255-r,255-g,255-b;\
+        printf "%s\033[0m", substr(s,colnum+1,1);\
+    }\
+    printf "\n";\
+}'
+ls
+pwd
+nvim ~/.tmux.conf
+mvn clean compile
+mvnboot
+truecolors
+alacritty-themes 
+cd
+bash
+bash
+echo $HOSTNAME
+echo $HOSTNAME
+echo $HOST
+whoami
+pipes.sh =-p4
+pipes.sh -p4
+ls
+ls
+cat ls.txt
+rm ls.txt
+ls
+cd
+dev
+ls
+pwd
+conf
+nvim alacritty/alacritty.yml
+cd
+alacritty-themes Nord
+LS
+nvim .config/alacritty/alacritty.yml
+nvim .config/nvim/lua/plugins.lua
+nvim .config/nvim/lua/plugins.lua
+nvim .config/nvim/lua/plugins.lua
+nvim .config/nvim/lua/plugins.lua
+cd
+pwd
+ls
+dev
+jag
+cd
+ls
+pwd
+cd
+ls
+jag
+mvn clean
+mvn repackage
+mvn package
+ls target
+killall alacritty
+cd
+dev
+ls
+jag
+cd
+ls
+pwd
+\:q
+bye
+ls
+pwd
+jag
+mvn package
+ls
+vim
+cd
+pwd
+ls
+cd .config
+cd alacritty
+ls
+cd
+dev
+;s
+pwd
+cd
+dev
+jag
+ls
+pwd
+cd
+jag
+neofetch
+dev
+jag
+nvim .config/kitty/kitty.conf
+cd
+dev
+ls
+pwd
+jag
+nvim .config/kitty/kitty.conf
+cd
+nvim .config/kitty/kitty.conf
+btop
+jag
+cd
+nvim .config/kitty/kitty.conf
+jag
+brew rm alacritty
+bye
+cd
+ls
+pwd
+cowsay hi
+ls
+sys
+bye
+btm
+bye
+btm
+jag
+cd
+nvim .config/alacritty/alacritty.yml
+\:q
+maccina
+macchina
+macchina
+bye
+mvim .vimrc
+git add .gitignore
+git commit -m 'Update gitignore (emacs)'
+git push origin master
+git add .gitignore
+git commit -m 'Update gitignore (emacs)'
+git push origin master; bye
+;s
+ls
+[pwd
+pwd
+echo $TERM
+\:q
+cd
+;s
+pwd
+pwd
+bash
+ls
+pwd
+cd
+whoami
+cd
+ls
+pwd
+jag
+mvnc
+byem
+bye
+iterm
+ls
+pwd
+echo "hello" 2>/dev/null
+echo "hello" >/dev/null
+echo "hello" >/dev/null
+echo "hello" >/dev/null
+echo "hello" >/dev/null
+echo "hello" >/dev/null; cat /dev/null
+ls
+pwd
+la
+tree src
+pwd
+idea
+idea
+idea
+bye
+sys
+bye
+alacritty-themes
+macchina
+alacritty-themes
+nvim .config/alacritty/alacritty.yml
+nvim .config/alacritty/alacritty.yml
+alacritty-themes 
+ls
+jag
+mvnc
+alacritty-themes Nord
+bye
+cd dev
+pwd
+jag
+mvn clean
+cd
+nvim .config/alacritty/alacritty.yml
+alacritty-themes
+cd dev
+jag
+mvn clean
+bye
+cd dev
+cd
+nvim .config/alacritty/alacritty.yml
+idea
+alacritty-themes 
+ls
+cd
+dev
+pwd
+bye
+bye
+zsh -0
+bye
+bye0
+zsh -
+bye
+cd dev
+pwd
+macchina
+l
+sls
+ls
+colors
+bye
+ls
+colors
+bye

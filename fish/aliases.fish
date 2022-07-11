@@ -41,3 +41,4 @@ alias mvim="open -a 'MacVim'"
 
 ### OTHER ###
 alias bash="/opt/homebrew/bin/bash"
+alias vim="/opt/homebrew/bin/vim"
