@@ -29,9 +29,11 @@
 ;; refresh your font settings. If Emacs still can't find your font, it likely
 ;; wasn't installed correctly. Font issues are rarely Doom issues!
 (setq doom-font (font-spec :family "Source Code Pro" :size 15 :weight 'medium)
-      doom-variable-pitch-font (font-spec :family "SF Compact" :size 15)
-      doom-unicode-font (font-spec :family "SFMono Nerd Font" :size 15)
-      doom-big-font (font-spec :family "Source Code Pro"))
+      doom-variable-pitch-font (font-spec :family "Source Code Pro" :size 15)
+      doom-unicode-font (font-spec :family "SauceCodePro Nerd Font" :size 15)
+      doom-big-font (font-spec :family "Source Code Pro")
+      doom-serif-font (font-spec :family "Source Code Pro")
+      )
 
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
@@ -82,3 +84,11 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+
+
+
+;; My Configs.
+;; Stay back unless you want an hour of debugging.
+(setq modus-themes-italic-constructs t)
+(setq treemacs-no-png-images t)
