@@ -1,8 +1,12 @@
-require('plugins')
+require "core"
+require "core.options"
 
--- Basic configurations
-vim.cmd [[
-	set nu 
-	set guicursor=
-	set mouse=a
-]]
+vim.defer_fn(function()
+   require("core.utils").load_mappings()
+end, 0)
+
+-- setup packer + plugins
+require("core.packer").bootstrap()
+require "plugins"
+
+pcall(require, "custom")

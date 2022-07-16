@@ -22,6 +22,8 @@ return require('packer').startup(function()
 	use 'folke/tokyonight.nvim'
 	use 'ishan9299/modus-theme-vim'
 	use 'https://github.com/Rigellute/rigel'
+	use { "ellisonleao/gruvbox.nvim" }
+	use 'https://github.com/cocopon/iceberg.vim'
 
 	-- Statusbar
 	use {
