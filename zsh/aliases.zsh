@@ -1,10 +1,9 @@
 ### GENERAL ###
 alias ip='curl -s ipinfo.io'
-alias sys='btop'
 alias sortfiles='ls -a > sortfile.txt; sort sortfile.txt; rm sortfile.txt'
 alias bel='tput bel'
 alias rel='source ~/.zshrc'
-alias grep='grep --color=auto'
+alias grep='rg --color=auto'
 
 ### LS ###
 alias ls='ls -GF'
@@ -34,6 +33,7 @@ alias pull='git pull origin'
 alias jag='cd ~/dev/jaguar'
 alias dev='cd ~/dev'
 alias conf='cd ~/.config'
+alias blog='cd ~/dev/blog'
 
 ### MAVEN ###
 alias mvnc='mvn clean'

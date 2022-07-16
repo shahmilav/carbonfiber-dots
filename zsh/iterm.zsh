@@ -16,7 +16,3 @@ alias it2tip=/Users/milavshah/.iterm2/it2tip;
 alias it2ul=/Users/milavshah/.iterm2/it2ul;
 alias it2universion=/Users/milavshah/.iterm2/it2universion
 
-function iterm2_print_user_vars() {
-  iterm2_set_user_var gitBranch $((git branch 2> /dev/null) | grep \* | cut -c3-)
-  iterm2_set_user_var home $(echo -n "$HOME")
-}

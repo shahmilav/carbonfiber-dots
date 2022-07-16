@@ -79,3 +79,7 @@ Icon\r
 
 # ZSH
 .zcompdump
+
+# RUST (Cargo)
+Cargo.lock
+target/

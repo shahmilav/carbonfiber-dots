@@ -28,3 +28,5 @@ source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
 source /opt/homebrew/opt/chruby/share/chruby/auto.sh
 chruby ruby-3.1.2
+
+export NETLIFY_AUTH_TOKEN='BPubMV4cQWRgOvLhaYr2n11_8X12KG8XJNVB1ERPXzY'

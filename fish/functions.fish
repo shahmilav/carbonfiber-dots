@@ -34,3 +34,15 @@ function hack --description 'Hack someone'
 	end	
 
 end
+
+function blog-build --description 'Build + run blog'
+	rm -r public;
+	echo "Removed build files";
+	npm run build;
+	echo "Build project";
+	npm start &; say "Site running: localhost 1000";
+end
+
+function dark
+	osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to not dark mode';
+end
