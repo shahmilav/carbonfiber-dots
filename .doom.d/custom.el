@@ -8,6 +8,7 @@
  '(custom-safe-themes
    '("835868dcd17131ba8b9619d14c67c127aa18b90a82438c8613586331129dda63" "0d01e1e300fcafa34ba35d5cf0a21b3b23bc4053d388e352ae6a901994597ab1" "1704976a1797342a1b4ea7a75bdbb3be1569f4619134341bd5a4c1cfb16abad4" default))
  '(menu-bar-mode nil)
+ '(package-selected-packages '(ob-rust doom-modeline nord-theme racer rust-mode))
  '(size-indication-mode t)
  '(tool-bar-mode nil)
  '(treemacs-no-png-images t))
