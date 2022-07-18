@@ -28,18 +28,17 @@
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
 ;; refresh your font settings. If Emacs still can't find your font, it likely
 ;; wasn't installed correctly. Font issues are rarely Doom issues!
-(setq doom-font (font-spec :family "Source Code Pro" :size 15 :weight 'medium)
-      doom-variable-pitch-font (font-spec :family "Source Code Pro" :size 15)
-      doom-unicode-font (font-spec :family "SauceCodePro Nerd Font" :size 15)
-      doom-big-font (font-spec :family "Source Code Pro")
-      doom-serif-font (font-spec :family "Source Code Pro")
+(setq doom-font (font-spec :family "SF Mono" :size 17 :weight 'medium)
+      doom-variable-pitch-font (font-spec :family "SF Mono" :weight 'medium :size 17)
+      doom-unicode-font (font-spec :family "SFMono Nerd Font" :weight 'medium :size 17)
+      doom-big-font (font-spec :family "SF Mono")
+      doom-serif-font (font-spec :family "New York")
       )
-
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'modus-vivendi)
+(setq doom-theme 'doom-nord)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -91,4 +90,3 @@
 ;; My Configs.
 ;; Stay back unless you want an hour of debugging.
 (setq modus-themes-italic-constructs t)
-(setq treemacs-no-png-images t)
