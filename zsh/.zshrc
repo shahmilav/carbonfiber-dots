@@ -21,12 +21,8 @@ export HOMEBREW_NO_ENV_HINTS
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 test -r ~/.dir_colors && eval $(gdircolors ~/.dir_colors)
 
+
 source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 [[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
 
-source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-source /opt/homebrew/opt/chruby/share/chruby/auto.sh
-chruby ruby-3.1.2
-
-export NETLIFY_AUTH_TOKEN='BPubMV4cQWRgOvLhaYr2n11_8X12KG8XJNVB1ERPXzY'

@@ -43,21 +43,18 @@ function exists() {
 	return 1
 }
 
-256color() {
+function 256color() {
 	for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done
 }
 
-take() {
+function take() {
 	mkdir "$1";
 	cd "$1";
 	return 0;
 }
 
-todo() {
-	echo "* [ ] $1" >> ~/TODO.md
-}
 
-colors() {
+function colors() {
 
 	T='gYw'
 
@@ -84,6 +81,6 @@ function blog_build() {
 }
 
 function dark() {
-	function dark
 	osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to not dark mode';
 }
+

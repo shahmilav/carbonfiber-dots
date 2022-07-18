@@ -1,14 +1,15 @@
 ### GENERAL ###
 alias ip='curl -s ipinfo.io'
-alias sortfiles='ls -a > sortfile.txt; sort sortfile.txt; rm sortfile.txt'
-alias bel='tput bel'
 alias rel='source ~/.zshrc'
-alias grep='rg --color=auto'
 
-### LS ###
+### COMMANDS ###
 alias ls='ls -GF'
 alias ll='ls -lGF'
 alias la='ls -GFA'
+alias cp="cp -v"
+alias mv="mv -v"
+alias mkdir="mkdir -pv"
+alias rm="rm -v"
 
 ### NAVIGATION ###
 alias ..='cd ../'
@@ -57,3 +58,4 @@ alias st="open -a 'Sublime Text'"
 alias gh="open -a 'GitHub Desktop'"
 alias br="open -a 'Brave Browser Beta'"
 alias iterm="open -a 'iTerm'"
+alias e="emacs"
