@@ -9,7 +9,7 @@ SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR _hydro_git_20528:master\x21\x20
 SETUVAR _hydro_git_44241:main\x2a\x20
 SETUVAR _hydro_git_52694:master\u2022\x20
-SETUVAR _hydro_git_98850:main\x2a\x20\u21914\x20
+SETUVAR _hydro_git_98850:main\x2a\x20
 SETUVAR fish_color_autosuggestion:555
 SETUVAR fish_color_cancel:\x2d\x2dreverse
 SETUVAR fish_color_command:blue
