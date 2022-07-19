@@ -2,7 +2,6 @@
 
 Welcome to the evil side.
 This is my config for Doom Emacs.
-
 <br />
 
 ## Table of Contents
