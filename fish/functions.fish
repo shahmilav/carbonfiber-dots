@@ -40,7 +40,8 @@ function blog-build --description 'Build + run blog'
 	echo "Removed build files";
 	npm run build;
 	echo "Build project";
-	npm start &; say "Site running: localhost 1000";
+        say "Site running: localhost 1000";
+        npm start; 
 end
 
 function dark

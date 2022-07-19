@@ -1,5 +1,5 @@
 set --global hydro_color_error $fish_color_error
-set --global hydro_symbol_prompt λ
+set --global hydro_symbol_prompt ❯
 set --global hydro_symbol_git_dirty "*"
 set --global hydro_symbol_git_ahead ↑
 set --global hydro_symbol_git_behind ↓

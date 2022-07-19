@@ -11,8 +11,9 @@ set maven /Users/milavshah/libs/apache-maven-3.6.3/bin
 set python /Library/Frameworks/Python.framework/Versions/3.10/bin
 set cargo /Users/milavshah/.cargo/bin/
 set macports /opt/local/bin:/opt/local/sbin
-set -gx PATH $default_path $homebrew $maven $python $cargo $macports
-
+set doom /Users/milavshah/.emacs.d/doom/bin
+set emacs /Applications/Emacs.app/Contents/MacOS/bin
+set -gx PATH $default_path $homebrew $maven $python $cargo $macports $doom emacs
 
 
 
