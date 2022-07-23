@@ -1,0 +1,19 @@
+# HJKL
+
+# focus window
+ctrl + alt - h : yabai -m window --focus west || yabai -m window --focus east
+ctrl + alt - j : yabai -m window --focus south || yabai -m window --focus north
+ctrl + alt - k : yabai -m window --focus north || yabai -m window --focus south
+ctrl + alt - l : yabai -m window --focus east || yabai -m window --focus west
+
+# move window
+ctrl + shift - h : (yabai -m window --warp west || yabai -m window --warp east) || yabai -m window --move rel:-40:0
+ctrl + shift - j : (yabai -m window --warp south || yabai -m window --warp north) || yabai -m window --move rel:0:40
+ctrl + shift - k : (yabai -m window --warp north || yabai -m window --warp south) || yabai -m window --move rel:0:-40
+ctrl + shift - l : (yabai -m window --warp east || yabai -m window --warp west) || yabai -m window --move rel:40:0
+
+# swap window
+ctrl + alt + shift - h : yabai -m window --swap west || yabai -m window --swap east
+ctrl + alt + shift - j : yabai -m window --swap south || yabai -m window --swap north
+ctrl + alt + shift - k : yabai -m window --swap north || yabai -m window --swap south
+ctrl + alt + shift - l : yabai -m window --swap east || yabai -m window --swap west
