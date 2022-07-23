@@ -1,6 +1,14 @@
 #+title: My Dotfiles
 
-** my overengineered digital home
+*my overengineered digital home*
+
+[[./images/cmatrix.png]]
+[[./images/pipes.png]]
+[[./images/btm.png]]
+[[./images/desktop.png]]
+[[./images/emacs.png]]
+
+
 
 ** tools
 I mean, I /could/ just use VSCode but...
