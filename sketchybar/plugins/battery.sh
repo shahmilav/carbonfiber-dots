@@ -1,8 +1,26 @@
 #!/usr/bin/env sh
 
-DETAILS="$(pmset -g batt)"
-# SOURCE="$(echo "$DETAILS" | grep -o "\'.*\'" | sed "s/'//g")"
-PERCENT="$(echo "$DETAILS" | grep -o "\d*\%")"
-REMAINING="$(echo "$DETAILS" | grep -o " \d*:\d* ")"
+PERCENTAGE=$(pmset -g batt | grep -Eo "\d+%" | cut -d% -f1)
+CHARGING=$(pmset -g batt | grep 'AC Power')
 
-sketchybar --set $NAME icon="$PERCENT" label="$REMAINING"
+if [ $PERCENTAGE = "" ]; then
+  exit 0
+fi
+
+case ${PERCENTAGE} in
+  9[0-9]|100) ICON=""
+  ;;
+  [6-8][0-9]) ICON=""
+  ;;
+  [3-5][0-9]) ICON=""
+  ;;
+  [1-2][0-9]) ICON=""
+  ;;
+  *) ICON=""
+esac
+
+if [[ $CHARGING != "" ]]; then
+  ICON=""
+fi
+
+sketchybar --set $NAME icon="$ICON" label="${PERCENTAGE}%"
