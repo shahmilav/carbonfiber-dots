@@ -8,7 +8,7 @@ ITEM_DIR="$HOME/.config/sketchybar/items"
 
 source $HOME/.config/sketchybar/colors.sh
 
-export FONT="Source Code Pro"
+export FONT="SF Mono"
 export NERD_FONT="SFMono Nerd Font"
 
 ##### Bar Appearance #####
