@@ -347,12 +347,12 @@ font:
 cursor:
   # Cursor style
   style:
-  # Cursor shape
-  #
-  # Values for `shape`:
-  #   - ▇ Block
-  #   - _ Underline
-  #   - | Beam
+    # Cursor shape
+    #
+    # Values for `shape`:
+    #   - ▇ Block
+    #   - _ Underline
+    #   - | Beam
     shape: Underline
   # Cursor blinking state
   #
@@ -828,37 +828,33 @@ cursor:
   #print_events: false
   # Highlight window damage information.
   #highlight_damage: false
-
 colors:
   # Default colors
   primary:
-    background: '#292d3e'
-    foreground: '#959dcb'
-    bright_foreground: '#d0d0d0'
-
-  cursor:
-    text: '#292d3e'
-    cursor: '#959dcb'
+    background: '#282c34'
+    foreground: '#abb2bf'
 
   # Normal colors
   normal:
-    black: '#292d3e'
-    red: '#f07178'
-    green: '#c3e88d'
-    yellow: '#ffcb6b'
-    blue: '#82aaff'
-    magenta: '#c792ea'
-    cyan: '#89ddff'
-    white: '#d0d0d0'
+    # NOTE: Use '#131613' for the `black` color if you'd like to see
+    # black text on the background.
+    black: '#282c34'
+    red: '#e06c75'
+    green: '#98c379'
+    yellow: '#d19a66'
+    blue: '#61afef'
+    magenta: '#c678dd'
+    cyan: '#56b6c2'
+    white: '#abb2bf'
 
   # Bright colors
   bright:
-    black: '#434758'
-    red: '#ff8b92'
-    green: '#ddffa7'
-    yellow: '#ffe585'
-    blue: '#9cc4ff'
-    magenta: '#e1acff'
-    cyan: '#a3f7ff'
+    black: '#5c6370'
+    red: '#e06c75'
+    green: '#98c379'
+    yellow: '#d19a66'
+    blue: '#61afef'
+    magenta: '#c678dd'
+    cyan: '#56b6c2'
     white: '#ffffff'
-theme: Palenight
+theme: One-Dark
