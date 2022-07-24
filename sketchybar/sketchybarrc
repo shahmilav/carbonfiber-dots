@@ -18,12 +18,14 @@ export NERD_FONT="SFMono Nerd Font"
 # If you are looking for other colors, see the color picker:
 # https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
 
-sketchybar --bar height=32        \
-                 blur_radius=100   \
+
+sketchybar --bar height=30        \
+                 blur_radius=100  \
                  position=top     \
                  padding_left=10  \
                  padding_right=10 \
-                 color=0x20ffffff
+                 color=0x15ffffff \
+                 shadow=on
 
 ##### Changing Defaults #####
 # We now change some default values that are applied to all further items
@@ -32,9 +34,9 @@ sketchybar --bar height=32        \
 
 sketchybar --default updates=when_shown                    \
                      drawing=on                            \
-                     icon.font="$NERD_FONT:Medium:14.0"  \
+                     icon.font="$NERD_FONT:Medium:15.0"  \
                      icon.color=0xffffffff                 \
-                     label.font="$FONT:Bold:14.0" \
+                     label.font="$FONT:Light:15.0" \
                      label.color=0xffffffff                \
                      label.padding_left=4                  \
                      label.padding_right=4                 \
@@ -46,7 +48,7 @@ sketchybar --default updates=when_shown                    \
 # https://felixkratz.github.io/SketchyBar/config/components#space----associate-mission-control-spaces-with-an-item
 # to indicate active and available mission control spaces
 
-SPACE_ICONS=("I" "II" "III" "IV" "V" "VI" "VII" "VIII" "IX" "X")
+SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10")
 
 for i in "${!SPACE_ICONS[@]}"
 do
@@ -65,7 +67,7 @@ do
                               label.drawing=off                          \
                               script="$PLUGIN_DIR/space.sh"              \
                               click_script="yabai -m space --focus $sid" \
-                              icon.font="$FONT:Bold:14.0"
+                              icon.font="$NERD_FONT:Light:15.0"
 done
 
 ##### Adding Left Items #####

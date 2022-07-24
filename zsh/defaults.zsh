@@ -2,7 +2,7 @@
 # term
 export TERM="xterm-256color"
 # editor
-export EDITOR="nvim"
+export EDITOR="em"
 # pager
 export PAGER="bat --theme Nord"
 # dircolors (nord)

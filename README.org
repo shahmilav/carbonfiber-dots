@@ -53,7 +53,11 @@ git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
 #+end_src
 
+<<<<<<< Updated upstream
 4. Copy my Doom [[https://github.com/shahmilav/doom-emacs-config][config files]] to =~/.doom.d=
+=======
+4. Copy my Doom [[https://github.com/shahmilav/doom-emacs-config][config files]] to ~~/.doom.d/~
+>>>>>>> Stashed changes
 5. Set up preffered iTerm2 preferences
 6. Set up yabai, sketchybar and skhd
 #+begin_src

@@ -17,3 +17,6 @@ ctrl + alt + shift - h : yabai -m window --swap west || yabai -m window --swap e
 ctrl + alt + shift - j : yabai -m window --swap south || yabai -m window --swap north
 ctrl + alt + shift - k : yabai -m window --swap north || yabai -m window --swap south
 ctrl + alt + shift - l : yabai -m window --swap east || yabai -m window --swap west
+
+cmd - return : open -a "Safari Technology Preview"
+
