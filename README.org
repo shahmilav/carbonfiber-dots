@@ -54,7 +54,19 @@ git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
 #+end_src
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 4. Copy my Doom [[https://github.com/shahmilav/doom-emacs-config][config files]] to =~/.doom.d=
+=======
+4. Copy my Doom [[https://github.com/shahmilav/doom-emacs-config][config files]] to ~~/.doom.d/~
+>>>>>>> Stashed changes
+=======
+4. Copy my Doom [[https://github.com/shahmilav/doom-emacs-config][config files]] to ~~/.doom.d/~
+>>>>>>> Stashed changes
+=======
+4. Copy my Doom [[https://github.com/shahmilav/doom-emacs-config][config files]] to ~~/.doom.d/~
+>>>>>>> Stashed changes
 =======
 4. Copy my Doom [[https://github.com/shahmilav/doom-emacs-config][config files]] to ~~/.doom.d/~
 >>>>>>> Stashed changes
