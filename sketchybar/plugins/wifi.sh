@@ -4,8 +4,6 @@ CURRENT_WIFI="$(/System/Library/PrivateFrameworks/Apple80211.framework/Versions/
 SSID="$(echo "$CURRENT_WIFI" | grep -o "SSID: .*" | sed 's/^SSID: //')"
 CURR_TX="$(echo "$CURRENT_WIFI" | grep -o "lastTxRate: .*" | sed 's/^lastTxRate: //')"
 
-if [ "$SSID" = "" ]; then
-  sketchybar --set $NAME label="No Wifi"
-else
-  sketchybar --set $NAME label="${CURR_TX}Mbps"
-fi
+POPUP_OFF="sketchybar --set wifi.control popup.drawing=off"
+POPUP_CLICK_SCRIPT="sketchybar --set \$NAME popup.drawing=toggle"
+
