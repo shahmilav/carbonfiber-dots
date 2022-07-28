@@ -66,4 +66,4 @@ require("gruvbox").setup({
 
 -- Load the colorscheme(s)
 
-vim.cmd[[colorscheme nord]]
+vim.cmd[[colorscheme onedark]]
