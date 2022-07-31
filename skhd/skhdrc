@@ -23,3 +23,7 @@ ctrl + cmd - h : yabai -m window west --resize right:-20:0 2> /dev/null || yabai
 ctrl + cmd - j : yabai -m window north --resize bottom:0:20 2> /dev/null || yabai -m window --resize bottom:0:20
 ctrl + cmd - k : yabai -m window south --resize top:0:-20 2> /dev/null || yabai -m window --resize top:0:-20
 ctrl + cmd - l : yabai -m window east --resize left:20:0 2> /dev/null || yabai -m window --resize left:20:0
+
+ctrl + shift + b : yabai -m config layout bsp
+ctrl + shift + s : yabai -m config layout stack
+ctrl + shift + f : yabai -m config layout float
