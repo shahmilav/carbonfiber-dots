@@ -4,11 +4,8 @@ export TERM="xterm-256color"
 # editor
 export EDITOR="em"
 # pager
-export PAGER="bat --theme Nord"
-# dircolors (nord)
-test -r ~/.dir_colors && eval $(gdircolors ~/.dir_colors)
-# case-insensitive completion
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+export PAGER="bat --theme OneHalfDark"
+
 autoload -Uz compinit && compinit
 
 # Colored manpages (https://www.tecmint.com/view-colored-man-pages-in-linux/ )
