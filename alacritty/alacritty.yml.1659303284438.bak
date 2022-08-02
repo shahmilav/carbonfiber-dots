@@ -110,7 +110,7 @@ font:
     family: SFMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: Light
+    style: Light 
 
   # Bold font face
   bold:
@@ -121,7 +121,7 @@ font:
     family: SFMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: Medium
+    style: Medium 
 
   # Italic font face
   italic:
@@ -831,30 +831,30 @@ cursor:
 colors:
   # Default colors
   primary:
-    background: '#282c34'
-    foreground: '#abb2bf'
+    # hard contrast: background = '#1d2021'
+    background: '#282828'
+    # soft contrast: background = '#32302f'
+    foreground: '#ebdbb2'
 
   # Normal colors
   normal:
-    # NOTE: Use '#131613' for the `black` color if you'd like to see
-    # black text on the background.
-    black: '#282c34'
-    red: '#e06c75'
-    green: '#98c379'
-    yellow: '#d19a66'
-    blue: '#61afef'
-    magenta: '#c678dd'
-    cyan: '#56b6c2'
-    white: '#abb2bf'
+    black: '#282828'
+    red: '#cc241d'
+    green: '#98971a'
+    yellow: '#d79921'
+    blue: '#458588'
+    magenta: '#b16286'
+    cyan: '#689d6a'
+    white: '#a89984'
 
   # Bright colors
   bright:
-    black: '#5c6370'
-    red: '#e06c75'
-    green: '#98c379'
-    yellow: '#d19a66'
-    blue: '#61afef'
-    magenta: '#c678dd'
-    cyan: '#56b6c2'
-    white: '#ffffff'
-theme: One-Dark
+    black: '#928374'
+    red: '#fb4934'
+    green: '#b8bb26'
+    yellow: '#fabd2f'
+    blue: '#83a598'
+    magenta: '#d3869b'
+    cyan: '#8ec07c'
+    white: '#ebdbb2'
+theme: Gruvbox-Dark
