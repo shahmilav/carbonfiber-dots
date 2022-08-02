@@ -56,7 +56,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  decorations: full
+  decorations: none 
 
   # Background opacity
   #
@@ -107,10 +107,10 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: SFMono Nerd Font
+    family: TerminessTTF Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: Light
+    style: Medium 
 
   # Bold font face
   bold:
@@ -118,10 +118,10 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: SFMono Nerd Font
+    family: TerminessTTF Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: Medium
+    style: Bold
 
   # Italic font face
   italic:
@@ -129,10 +129,10 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: SFMono Nerd Font
+    family: TerminessTTF Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: Light Italic
+    style: Medium Italic
 
   # Bold italic font face
   bold_italic:
@@ -140,13 +140,13 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: SFMono Nerd Font
+    family: TerminessTTF Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: Medium Italic
+    style: Bold Italic
 
   # Point size
-  size: 16.0
+  size: 14.0
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
@@ -829,32 +829,30 @@ cursor:
   # Highlight window damage information.
   #highlight_damage: false
 colors:
-  # Default colors
+  name: Ashes (dark)
+  author: Chris Kempson
   primary:
-    background: '#282c34'
-    foreground: '#abb2bf'
-
-  # Normal colors
+    background: "#1c2023"
+    foreground: "#c7ccd1"
+  cursor:
+    text: "#1c2023"
+    cursor: "#c7ccd1"
   normal:
-    # NOTE: Use '#131613' for the `black` color if you'd like to see
-    # black text on the background.
-    black: '#282c34'
-    red: '#e06c75'
-    green: '#98c379'
-    yellow: '#d19a66'
-    blue: '#61afef'
-    magenta: '#c678dd'
-    cyan: '#56b6c2'
-    white: '#abb2bf'
-
-  # Bright colors
+    black: "#1c2023"
+    red: "#c7ae95"
+    green: "#95c7ae"
+    yellow: "#aec795"
+    blue: "#ae95c7"
+    magenta: "#c795ae"
+    cyan: "#95aec7"
+    white: "#c7ccd1"
   bright:
-    black: '#5c6370'
-    red: '#e06c75'
-    green: '#98c379'
-    yellow: '#d19a66'
-    blue: '#61afef'
-    magenta: '#c678dd'
-    cyan: '#56b6c2'
-    white: '#ffffff'
-theme: One-Dark
+    black: "#747c84"
+    red: "#c7ae95"
+    green: "#95c7ae"
+    yellow: "#aec795"
+    blue: "#ae95c7"
+    magenta: "#c795ae"
+    cyan: "#95aec7"
+    white: "#f3f4f5"
+theme: Ashes.dark
