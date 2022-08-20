@@ -2,9 +2,7 @@
 # term
 export TERM="xterm-256color"
 # editor
-export EDITOR="em"
-# pager
-export PAGER="bat --theme OneHalfDark"
+export EDITOR="bbedit"
 
 autoload -Uz compinit && compinit
 

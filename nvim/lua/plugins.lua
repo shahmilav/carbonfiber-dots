@@ -21,9 +21,11 @@ return require('packer').startup(function()
 	use 'https://gitlab.com/__tpb/monokai-pro.nvim'
 	use 'folke/tokyonight.nvim'
 	use 'ishan9299/modus-theme-vim'
-	use 'https://github.com/Rigellute/rigel'
-	use { "ellisonleao/gruvbox.nvim" }
-	use 'https://github.com/cocopon/iceberg.vim'
+	use 'ishan9299/nvim-solarized-lua'
+	use 'sainnhe/everforest'
+	use 'sainnhe/gruvbox-material'
+	use 'sainnhe/sonokai'
+	use 'sainnhe/edge'
 
 	-- Statusbar
 	use {
