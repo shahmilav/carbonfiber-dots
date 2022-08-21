@@ -3,7 +3,7 @@ vim.g.nord_contrast = true
 vim.g.nord_borders = true
 
 -- Monokai Pro
-vim.g.monokaipro_filter = "spectrum"
+vim.g.monokaipro_filter = "machine"
 vim.g.monokaipro_sidebars = { "nvim-tree", "packer" }
 
 
@@ -50,4 +50,4 @@ vim.g.tokyonight_sidebars = { "nvim-tree", "terminal", "packer" }
 
 -- Load the colorscheme(s)
 
-vim.cmd[[colorscheme onedark]]
+vim.cmd[[colorscheme monokaipro]]
