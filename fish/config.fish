@@ -52,4 +52,25 @@ alias py="python3.10"
 alias moon="python3.10 ~/dev/moon_phases/moon_phase.py"
 alias picalc="python3.10  ~/dev/pi-thon-calc/calculator.py"
 
-alias stp="open -a 'Safari Technology Preview'"
+alias stp="open -a 'Safari Technology Preview'" 
+
+##########################################
+
+function dark --description "Toggle macOS appearance"
+	osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to not dark mode';
+end
+
+function take -d "Create a directory and set CWD"
+    command mkdir $argv
+    if test $status = 0
+        switch $argv[(count $argv)]
+            case '-*'
+
+            case '*'
+                cd $argv[(count $argv)]
+                return
+        end
+    end
+end
+
+
