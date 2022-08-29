@@ -3,8 +3,7 @@ if status is-interactive
 end
 
 function fish_greeting
-   echo (set_color red)Hello sir. (set_color blue)Hacking mainframe...(set_color normal)
-   echo
+   echo (set_color --bold cyan)"!#" (set_color -i blue)fish(set_color normal) \n
 end
 
 ##########################################

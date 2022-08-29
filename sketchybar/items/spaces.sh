@@ -17,5 +17,5 @@ do
                          label.drawing=off                          \
                          script="$PLUGIN_DIR/space.sh"              \
                          click_script="yabai -m space --focus $sid" \
-                         icon.font="$FONT:Light:15.0"
+                         icon.font="$FONT:Medium:15.0"
 done

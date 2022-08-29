@@ -50,4 +50,4 @@ vim.g.tokyonight_sidebars = { "nvim-tree", "terminal", "packer" }
 
 -- Load the colorscheme(s)
 
-vim.cmd[[colorscheme monokaipro]]
+vim.cmd[[colorscheme nord]]
