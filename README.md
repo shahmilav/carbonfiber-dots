@@ -15,9 +15,9 @@ _  /     __  /| |__  /_/ /__  __  |_  / / /__   |/ / __  /_     __  /  __  __  |
 
 ## Screenshots
 
-![Screenshot](./images/screenshot1.png)
-![Screenshot 2](./images/screenshot2.png)
-![Screenshot 3](./images/screenshot3.png)
+![Screenshot](./images/screenshot2.png)
+![Screenshot 2](./images/screenshot3.png)
+![Screenshot 3](./images/screenshot1.png)
 ![Screenshot 4](./images/screenshot4.png)
 
 ## Documenation
