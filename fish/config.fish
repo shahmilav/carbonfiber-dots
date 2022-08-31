@@ -15,6 +15,7 @@ fish_add_path /opt/local/bin
 fish_add_path $HOME/libs/apache-maven-3.6.3/bin
 fish_add_path /opt/local/sbin
 fish_add_path $HOME/.local.bin
+fish_add_path $HOME/.config/nvim/bin
 
 ##########################################
 

@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+set -o errexit -o pipefail -o nounset
+
+case "${1:-}" in
+  "")
+    printf "%s\n%s\n  %s\n%s\n" \
+      "usage: $(basename "$0") [options] [script [args]]" \
+      "Available options are:" \
+      "install  install required plugins" \
+      "sync  sync nyoom modules and plugins" \
+      "upgrade  upgrade Nyoom Nvim"
+    ;;
+  install)
+    printf -- 'Installing Required Plugins... \n';
+    git clone -q --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/opt/packer.nvim
+    git clone -q -b nightly --single-branch https://github.com/rktjmp/hotpot.nvim.git ~/.local/share/nvim/site/pack/packer/start/hotpot.nvim
+    printf -- '\033[32m Successfully Installed Plugins \033[0m\n';
+    ;;
+  sync)
+    start_time=`date +%s`
+    printf "Synchronizing your config with Nyoom Nvim\n\n";
+    printf "\033[36mnyoom version $(git log --pretty=tformat:"%h" -n1)\033[0m\n";
+    nvim --version | sed '/^$/,$d'
+    printf "\nClearing cache\n";
+    rm -rf ~/.cache/nvim/
+    rm -rf ~/.config/nvim/lua/
+    NYOOM_CLI=true nvim --headless -c 'autocmd User PackerComplete quitall' -c 'lua require[[packages]]' -c 'lua require("packer").sync()'
+    printf "\n\n\033[92mNyoom successfully synced plugins in $(expr `date +%s` - $start_time)s\033[0m\n";
+    printf "Restart Neovim for changes to take effect\n\n";
+    ;;
+  upgrade)
+    printf "Updating Nyoom Nvim\n";
+    git fetch
+    if [ $(git rev-parse HEAD) == $(git rev-parse @{u}) ]; then
+      printf "Up-to-date\n\n"
+      exit
+    fi
+    printf "\033[36mCurrent Nyoom version $(git log --pretty=tformat:"%h" -n1)\033[0m\n";
+    printf "Here's what you've missed:\n";
+    git log HEAD..origin/main
+    read -p "Continue updating? y/n" -n 1 -r
+    echo
+    if [[ $REPLY =~ ^[Yy]$ ]]
+    then
+      start_time=`date +%s`
+      printf "\nUpdating Nyoom\n";
+      git pull
+      printf "\033[92mNyoom successfully updated to version $(git log --pretty=tformat:"%h" -n1) in $(expr `date +%s` - $start_time)s\033[0m\n";
+      printf "Run 'nyoom sync' to syncronize modules\n\n";
+    fi
+    ;;
+esac
