@@ -15,10 +15,10 @@ _  /     __  /| |__  /_/ /__  __  |_  / / /__   |/ / __  /_     __  /  __  __  |
 
 ## Screenshots
 
-![Screenshot](./images/Screen Shot 2022-08-31 at 12.36.26 AM.png)
-![Screenshot 2](./images/Screen Shot 2022-08-31 at 12.37.36 AM.png)
-![Screenshot 3](./images/Screen Shot 2022-08-31 at 12.38.44 AM.png)
-![Screenshot 4](./images/Screen Shot 2022-08-31 at 12.39.57 AM.png)
+![Screenshot](./images/screenshot1.png)
+![Screenshot 2](./images/screenshot2.png)
+![Screenshot 3](./images/screenshot3.png)
+![Screenshot 4](./images/screenshot4.png)
 
 ## Documenation
 
