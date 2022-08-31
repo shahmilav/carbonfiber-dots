@@ -1,6 +1,14 @@
 <div align="center">
 
-# _Carbonfiber_: light & powerful macOS config.
+```
+_________                ______                 _____________ ______                
+__  ____/______ ____________  /_ ______ _______ ___  __/___(_)___  /_ _____ ________
+_  /     _  __ `/__  ___/__  __ \_  __ \__  __ \__  /_  __  / __  __ \_  _ \__  ___/
+/ /___   / /_/ / _  /    _  /_/ // /_/ /_  / / /_  __/  _  /  _  /_/ //  __/_  /    
+\____/   \__,_/  /_/     /_.___/ \____/ /_/ /_/ /_/     /_/   /_.___/ \___/ /_/     
+                                                                                    
+```
+## Carbonfiber: fast and pretty macOS config
 
 [Install](#Installation) • [Docs](#Documentation) • [Screenshots](#Screenshots)
 </div>
@@ -18,7 +26,7 @@ The wallpaper is the [Pro Display XDR](https://basicappleguy.com/basicappleblog/
 
 ### iTerm2
 The iTerm2 config can be found [here](./iterm2/CarbonfiberProfile.json).
-The font used in iTerm2 is _IBM Plex Mono Light_
+The font used in iTerm2 is _IBM Plex Mono Light_. 
 The colorscheme used is a personal port of the [Modus Vivendi](https://protesilaos.com/emacs/modus-themes) theme from Emacs. It can be downloaded [here]().
 
 ### Neovim
