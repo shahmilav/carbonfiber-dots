@@ -4,15 +4,15 @@ ITEM_DIR="$HOME/.config/sketchybar/items"
 source $HOME/.config/sketchybar/colors.sh
 source $HOME/.config/sketchybar/icons.sh
 
-export FONT="SF Pro"
-export NERD_FONT="SFMono Nerd Font"
+export FONT="IBM Plex Mono"
+export NERD_FONT="JetBrainsMono Nerd Font"
 
 sketchybar --bar height=30        \
                  blur_radius=100  \
                  position=top     \
                  padding_left=10  \
                  padding_right=10 \
-                 color=0x15ffffff \
+                 color=0x15000000 \
                  shadow=on
 
 sketchybar --default updates=when_shown                       \
