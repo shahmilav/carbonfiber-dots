@@ -10,30 +10,28 @@ _  /     __  /| |__  /_/ /__  __  |_  / / /__   |/ / __  /_     __  /  __  __  |
 ```
 # Carbonfiber: fast and pretty macOS config
 
-[Install](#Installation) • [Docs](#Documentation) • [Screenshots](#Screenshots)
+[Docs](#Documentation) • [Screenshots](#Screenshots)
 </div>
 
 ## Screenshots
-wip
 
-## Installation
-wip
+![Screenshot](./images/Screen Shot 2022-08-31 at 12.36.26 AM.png)
+![Screenshot 2](./images/Screen Shot 2022-08-31 at 12.37.36 AM.png)
+![Screenshot 3](./images/Screen Shot 2022-08-31 at 12.38.44 AM.png)
+![Screenshot 4](./images/Screen Shot 2022-08-31 at 12.39.57 AM.png)
 
 ## Documenation
 
 ### Wallpaper
 The wallpaper is the [Pro Display XDR](https://basicappleguy.com/basicappleblog/xdr) wallpaper by BasicAppleGuy. 
-
 More versions of the wallpaper are available [here](https://basicappleguy.com/basicappleblog/xdr), in HEIC and JPG formats. 
 
 * wallpaper [here](./TitaniumDynamicXDR.heic)
 
 ### iTerm2
 The iTerm2 config can be found [here](./iterm2/CarbonfiberProfile.json).
-
 The font used in iTerm2 is _IBM Plex Mono Light_. 
-
-The colorscheme used is a personal port of the [Modus Vivendi](https://protesilaos.com/emacs/modus-themes) theme from Emacs. It can be downloaded [here](./iterm2/Modus Vivendi.itermcolors).
+The colorscheme used is a personal port of the [Modus Vivendi](https://protesilaos.com/emacs/modus-themes) theme from Emacs. It can be downloaded [here](https://raw.githubusercontent.com/shahmilav/carbonfiber-dots/main/iterm2/Modus%20Vivendi.itermcolors).
 
 * config folder [here](./iterm2)
 
@@ -46,7 +44,7 @@ The colorscheme used is the Nyoom default, [oxocarbon.nvim](https://github.com/s
 ### Yabai & skhd
 
 These two are grouped together since they work as one. SKHD is the hotkey daemon, yabai is the window manager.
-The config is very simplistic but it works well.
+The config(s) is very simplistic but it works well.
 
 **Note that I have not disabled SIP for yabai.**
 
@@ -58,8 +56,17 @@ For my bar, I use [sketchybar](https://felixkratz.github.io/SketchyBar/). Super 
 
 * config folder [here](./sketchybar)
 
+### fish shell
+The fish shell config is very personal. It can be copied over, but:
+* change the aliases
+* change the path
+
+The prompt used is [hydro](https://github.com/jorgebucaran/hydro).
+
 ## Credits
 Dotfiles assembled by [me](https://github.com/shahmilav), with parts taken from these people:
 * Thanks to [shaunsingh](https://github.com/shaunsingh) for Nyoom.nvim and oxocarbon.nvim! An amazing config and a beautiful theme.
 * George Nachman for developing iTerm2. The best macOS terminal, and I don't think I'll ever switch.
 * BasicAppleGuy for a good wallpaper.
+* jorgebucaran for developing hydro. Really good prompt.
+* Protesilaos for the Modus themes. Both light and dark are readable, accessible, and look good in and out of Emacs.
