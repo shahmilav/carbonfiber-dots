@@ -1,3 +1,14 @@
-function fish_prompt --description Hydro
-    echo -e "$_hydro_color_pwd$_hydro_pwd$hydro_color_normal $_hydro_color_git$$_hydro_git$hydro_color_normal$_hydro_color_duration$_hydro_cmd_duration$hydro_color_normal$_hydro_status$hydro_color_normal "
+function fish_prompt
+    if test -n "$SSH_TTY"
+        echo -n (set_color brred)"$USER"(set_color white)'@'(set_color yellow)(prompt_hostname)' '
+    end
+
+    echo -n (set_color blue)(prompt_pwd)' '
+
+    set_color -o
+    if fish_is_root_user
+        echo -n (set_color red)'# '
+    end
+    echo -n (set_color red)'❯'(set_color yellow)'❯'(set_color green)'❯ '
+    set_color normal
 end

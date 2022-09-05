@@ -3,7 +3,21 @@ if status is-interactive
 end
 
 function fish_greeting
-   echo (set_color --bold cyan)"!#" (set_color -i blue)fish(set_color normal) \n
+    echo (set_color --bold cyan)"!#" (set_color -i blue)fish(set_color normal) \n
+end
+
+function fish_prompt
+    if test (echo $status) -gt 0 
+        echo "[$(set_color $fish_color_cwd)$(prompt_pwd)$(set_color normal)] $(set_color $fish_color_error)\$ $(set_color normal)"
+    else
+        echo "[$(set_color $fish_color_cwd)$(prompt_pwd)$(set_color normal)] $(set_color cyan)\$$(set_color normal) " 
+    end
+end
+
+function fish_right_prompt
+    if [ -d .git ]
+        echo git:$(set_color magenta)$(git branch --show-current)$(set_color normal)
+    end
 end
 
 ##########################################
@@ -17,15 +31,6 @@ fish_add_path /opt/local/sbin
 fish_add_path $HOME/.local.bin
 fish_add_path $HOME/.config/nvim/bin
 fish_add_path $HOME/.local/bin
-
-##########################################
-
-set --global hydro_symbol_prompt    "λ"
-set --global hydro_symbol_git_dirty "*"
-set --global hydro_color_git        magenta 
-set --global hydro_color_pwd        blue
-set --global hydro_color_prompt     green
-set --global hydro_color_duration   yellow
 
 ##########################################
 
@@ -44,9 +49,9 @@ abbr --add gd git diff
 abbr --add gs git status
 
 abbr --add  .. cd ..
-abbr --add ... cd ...
-abbr --add .... cd ....
-abbr --add ..... cd .....
+abbr --add ... cd ../..
+abbr --add .... cd ../../..
+abbr --add ..... cd ../../../..
 
 abbr --add mvnc mvn clean
 abbr --add mvncom mvn compile
@@ -63,7 +68,7 @@ alias stp="open -a 'Safari Technology Preview'"
 ##########################################
 
 function dark -d "Toggle macOS appearance"
-	osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to not dark mode';
+    osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to not dark mode';
 end
 
 function take -d "Create a directory and set CWD"
@@ -73,8 +78,8 @@ function take -d "Create a directory and set CWD"
             case '-*'
 
             case '*'
-                cd $argv[(count $argv)]
-                return
+            cd $argv[(count $argv)]
+            return
         end
     end
 end

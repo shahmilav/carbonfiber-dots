@@ -31,7 +31,9 @@ More versions of the wallpaper are available [here](https://basicappleguy.com/ba
 
 ### iTerm2
 The iTerm2 config can be found [here](./iterm2/CarbonfiberProfile.json).
-The font used in iTerm2 is **IBM Plex Mono Light**. 
+The font used in iTerm2 is **JetBrains Mono Extra Light**. Note that the screenshots still need to be updated regarding the font. 
+The font in the screenshots is **IBM Plex Mono Light**.
+
 The colorscheme used is a personal port of the [Modus Vivendi](https://protesilaos.com/emacs/modus-themes) theme from Emacs. It can be downloaded [here](https://raw.githubusercontent.com/shahmilav/carbonfiber-dots/main/iterm2/Modus%20Vivendi.itermcolors).
 
 * config folder [here](./iterm2)
@@ -72,3 +74,5 @@ Dotfiles assembled by [me](https://github.com/shahmilav), with parts taken from 
 * `BasicAppleGuy` for a good wallpaper.
 * `jorgebucaran` for developing hydro. Really good shell prompt.
 * `Protesilaos` for the Modus themes. Both light and dark are readable, accessible, and look good in and out of Emacs.
+* `everyone else` for their parts: yabai/skhd devs, JetBrains, sketchybar devs, fish devs, nvim devs...
+wow that is a lot of thank yous
