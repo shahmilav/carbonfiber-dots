@@ -1,4 +1,4 @@
-theme = "onedark"
+theme = "monokai_pro_ristretto"
 
 [editor]
 line-number = "relative"

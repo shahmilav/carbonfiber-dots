@@ -3,14 +3,14 @@ if status is-interactive
 end
 
 function fish_greeting
-    echo (set_color --bold cyan)"!#" (set_color -i blue)fish(set_color normal) \n
+    echo (set_color --bold green)"!#" (set_color -i blue)fish(set_color normal) \n
 end
 
 function fish_prompt
     if test (echo $status) -gt 0 
         echo "[$(set_color $fish_color_cwd)$(prompt_pwd)$(set_color normal)] $(set_color $fish_color_error)\$ $(set_color normal)"
     else
-        echo "[$(set_color $fish_color_cwd)$(prompt_pwd)$(set_color normal)] $(set_color cyan)\$$(set_color normal) " 
+        echo "[$(set_color $fish_color_cwd)$(prompt_pwd)$(set_color normal)] $(set_color blue)\$$(set_color normal) " 
     end
 end
 
