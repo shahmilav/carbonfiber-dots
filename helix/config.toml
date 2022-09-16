@@ -1,4 +1,4 @@
-theme = "monokai_pro_ristretto"
+theme = "nord"
 
 [editor]
 line-number = "relative"

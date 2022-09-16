@@ -4,37 +4,37 @@ ITEM_DIR="$HOME/.config/sketchybar/items"
 source $HOME/.config/sketchybar/colors.sh
 source $HOME/.config/sketchybar/icons.sh
 
-export FONT="IBM Plex Mono"
-export NERD_FONT="JetBrainsMono Nerd Font"
+export FONT="SF Pro"
+export NERD_FONT="SFMono Nerd Font"
 
 sketchybar --bar height=30        \
                  blur_radius=100  \
                  position=top     \
                  padding_left=10  \
                  padding_right=10 \
-                 color=0x15000000 \
+                 color=0x25000000 \
                  shadow=on
 
 sketchybar --default updates=when_shown                       \
                      drawing=on                               \
                      icon.font="$NERD_FONT:Regular:14.0"      \
-                     icon.color=0xffffffff                    \
+                     icon.color=0xff000000                   \
                      label.font="$FONT:Medium:14.0"            \
-                     label.color=0xffffffff                   \
+                     label.color=0xff000000                    \
                      label.padding_left=4                     \
                      label.padding_right=4                    \
                      icon.padding_left=4                      \
                      icon.padding_right=4
 
 source $ITEM_DIR/apple.sh
+# source $ITEM_DIR/lamda.sh
 source $ITEM_DIR/spaces.sh
 source $ITEM_DIR/window_title.sh
 source $ITEM_DIR/clock.sh
 source $ITEM_DIR/battery.sh
-source $ITEM_DIR/cpu.sh
-source $ITEM_DIR/wifi.sh
 source $ITEM_DIR/darkside.sh
-
+source $ITEM_DIR/wifi.sh
+source $ITEM_DIR/stats.sh
 
 sketchybar --update
 

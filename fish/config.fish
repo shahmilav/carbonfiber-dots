@@ -8,9 +8,9 @@ end
 
 function fish_prompt
     if test (echo $status) -gt 0 
-        echo "[$(set_color $fish_color_cwd)$(prompt_pwd)$(set_color normal)] $(set_color $fish_color_error)\$ $(set_color normal)"
+        echo "[$(set_color $fish_color_cwd)$(prompt_pwd)$(set_color normal)] $(set_color $fish_color_error)λ $(set_color normal)"
     else
-        echo "[$(set_color $fish_color_cwd)$(prompt_pwd)$(set_color normal)] $(set_color blue)\$$(set_color normal) " 
+        echo "[$(set_color $fish_color_cwd)$(prompt_pwd)$(set_color normal)] $(set_color blue)λ$(set_color normal) " 
     end
 end
 
@@ -61,18 +61,18 @@ alias tidy="tidy -m --indent yes --tidy-mark no"
 
 abbr --add py python3.10
 alias moon="python3.10 ~/dev/moon_phases/moon_phase.py"
-alias picalc="python3.10  ~/dev/pi-thon-calc/calculator.py"
+alias picalc="python3.10  ~/dev/pi-thon-calc/calculator.py" 
 
 alias stp="open -a 'Safari Technology Preview'" 
 
-##########################################
+########################################## 
 
-function dark -d "Toggle macOS appearance"
-    osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to not dark mode';
-end
+function dark -d "Toggle macOS appearance" 
+    osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to not dark mode'; 
+end 
 
-function take -d "Create a directory and set CWD"
-    command mkdir $argv
+function take -d "Create a directory and set CWD" 
+    command mkdir $argv 
     if test $status = 0
         switch $argv[(count $argv)]
             case '-*'

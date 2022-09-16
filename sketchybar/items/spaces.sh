@@ -1,4 +1,4 @@
-SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10")
+SPACE_ICONS=("α" "β" "γ" "δ" "ε" "ζ" "η" "θ")
 
 for i in "${!SPACE_ICONS[@]}"
 do
@@ -17,5 +17,5 @@ do
                          label.drawing=off                          \
                          script="$PLUGIN_DIR/space.sh"              \
                          click_script="yabai -m space --focus $sid" \
-                         icon.font="$FONT:Medium:15.0"
+                         icon.font="$FONT:Bold:15.0"
 done
