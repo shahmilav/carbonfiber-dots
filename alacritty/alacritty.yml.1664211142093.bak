@@ -61,7 +61,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  decorations: full
+  decorations: buttonless
 
   # Background opacity
   #
@@ -116,10 +116,10 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: SFMono Nerd Font
+    family: SauceCodePro Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: Light 
+    style: Light
 
   # Bold font face
   bold:
@@ -127,10 +127,10 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: SFMono Nerd Font
+    family: SauceCodePro Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: Bold
+    style: Medium
 
   # Italic font face
   italic:
@@ -138,7 +138,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: SFMono Nerd Font
+    family: SauceCodePro Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Light Italic
@@ -149,10 +149,10 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: SFMono Nerd Font
+    family: SauceCodePro Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: Bold Italic
+    style: Medium Italic
 
   # Point size
   size: 14.0
@@ -181,32 +181,30 @@ font:
 draw_bold_text_with_bright_colors: false
 
 colors:
-  # Default colors
+  name: Ocean (dark)
+  author: Chris Kempson
   primary:
-    background: '#282c34'
-    foreground: '#abb2bf'
-
-  # Normal colors
+    background: "#2b303b"
+    foreground: "#c0c5ce"
+  cursor:
+    text: "#2b303b"
+    cursor: "#c0c5ce"
   normal:
-    # NOTE: Use '#131613' for the `black` color if you'd like to see
-    # black text on the background.
-    black: '#282c34'
-    red: '#e06c75'
-    green: '#98c379'
-    yellow: '#d19a66'
-    blue: '#61afef'
-    magenta: '#c678dd'
-    cyan: '#56b6c2'
-    white: '#abb2bf'
-
-  # Bright colors
+    black: "#2b303b"
+    red: "#bf616a"
+    green: "#a3be8c"
+    yellow: "#ebcb8b"
+    blue: "#8fa1b3"
+    magenta: "#b48ead"
+    cyan: "#96b5b4"
+    white: "#c0c5ce"
   bright:
-    black: '#5c6370'
-    red: '#e06c75'
-    green: '#98c379'
-    yellow: '#d19a66'
-    blue: '#61afef'
-    magenta: '#c678dd'
-    cyan: '#56b6c2'
-    white: '#ffffff'
-theme: One-Dark
+    black: "#65737e"
+    red: "#bf616a"
+    green: "#a3be8c"
+    yellow: "#ebcb8b"
+    blue: "#8fa1b3"
+    magenta: "#b48ead"
+    cyan: "#96b5b4"
+    white: "#eff1f5"
+theme: Ocean.dark

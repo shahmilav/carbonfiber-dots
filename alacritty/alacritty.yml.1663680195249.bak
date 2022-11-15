@@ -119,7 +119,7 @@ font:
     family: SFMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: Light 
+    style: Light
 
   # Bold font face
   bold:
@@ -130,7 +130,7 @@ font:
     family: SFMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: Bold
+    style: Medium
 
   # Italic font face
   italic:
@@ -152,7 +152,7 @@ font:
     family: SFMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: Bold Italic
+    style: Medium Italic
 
   # Point size
   size: 14.0
@@ -165,7 +165,8 @@ font:
     y: 0
 
   # Glyph offset determines the locations of the glyphs within their cells with
-  # the default being at the bottom. Increasing `x` moves the glyph to the right, increasing `y` moves the glyph upward.
+  # the default being at the bottom. Increasing `x` moves the glyph to the
+  # right, increasing `y` moves the glyph upward.
   glyph_offset:
     x: 0
     y: 0
@@ -183,30 +184,33 @@ draw_bold_text_with_bright_colors: false
 colors:
   # Default colors
   primary:
-    background: '#282c34'
-    foreground: '#abb2bf'
+    background: '#fdf6e3' # base3
+    foreground: '#657b83' # base00
+
+  # Cursor colors
+  cursor:
+    text: '#fdf6e3' # base3
+    cursor: '#657b83' # base00
 
   # Normal colors
   normal:
-    # NOTE: Use '#131613' for the `black` color if you'd like to see
-    # black text on the background.
-    black: '#282c34'
-    red: '#e06c75'
-    green: '#98c379'
-    yellow: '#d19a66'
-    blue: '#61afef'
-    magenta: '#c678dd'
-    cyan: '#56b6c2'
-    white: '#abb2bf'
+    black: '#073642' # base02
+    red: '#dc322f' # red
+    green: '#859900' # green
+    yellow: '#b58900' # yellow
+    blue: '#268bd2' # blue
+    magenta: '#d33682' # magenta
+    cyan: '#2aa198' # cyan
+    white: '#eee8d5' # base2
 
   # Bright colors
   bright:
-    black: '#5c6370'
-    red: '#e06c75'
-    green: '#98c379'
-    yellow: '#d19a66'
-    blue: '#61afef'
-    magenta: '#c678dd'
-    cyan: '#56b6c2'
-    white: '#ffffff'
-theme: One-Dark
+    black: '#002b36' # base03
+    red: '#cb4b16' # orange
+    green: '#586e75' # base01
+    yellow: '#657b83' # base00
+    blue: '#839496' # base0
+    magenta: '#6c71c4' # violet
+    cyan: '#93a1a1' # base1
+    white: '#fdf6e3' # base3
+theme: Solarized-Light

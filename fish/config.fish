@@ -2,23 +2,6 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-function fish_greeting
-    echo (set_color --bold green)"!#" (set_color -i blue)fish(set_color normal) \n
-end
-
-function fish_prompt
-    if test (echo $status) -gt 0 
-        echo "[$(set_color $fish_color_cwd)$(prompt_pwd)$(set_color normal)] $(set_color $fish_color_error)λ $(set_color normal)"
-    else
-        echo "[$(set_color $fish_color_cwd)$(prompt_pwd)$(set_color normal)] $(set_color blue)λ$(set_color normal) " 
-    end
-end
-
-function fish_right_prompt
-    if [ -d .git ]
-        echo git:$(set_color magenta)$(git branch --show-current)$(set_color normal)
-    end
-end
 
 ##########################################
 

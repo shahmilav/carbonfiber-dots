@@ -3,7 +3,6 @@
 # Uses SF Symbols.
 
 APPLE_ICN=􀣺
-LAMDA_ICN="[λ]"
 SUN_ICN=􀆮
 MOON_ICN=􀆺
 WIFI_ICN=􀙇
