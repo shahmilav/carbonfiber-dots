@@ -51,6 +51,7 @@ CharCenterHighest:	1
 PreferSpacingAccents:	0
 PreferPotrace:	0
 AutotraceAsk:	0
+MfArgs:	\scrollmode; mode=proof ; mag=2; input
 MfAsk:	0
 MfClearBg:	0
 MfShowErr:	0
@@ -111,11 +112,11 @@ AlmostHVBound:	3
 CheckSelfIntersects:	1
 ShowDebugChanges:	1
 DefaultScreenDpiSystem:	0
-DefaultOutputFormat:	1
-DefaultBitmapFormat:	0
+DefaultOutputFormat:	13
+DefaultBitmapFormat:	10
 SaveValidate:	1
 SaveFontLogAsk:	0
-DefaultSFNTflags:	32
+DefaultSFNTflags:	4
 DefaultPSflags:	9437184
 PageWidth:	0
 PageHeight:	0
@@ -155,13 +156,13 @@ CV_CB2Tool:	5
 XUID-Base:	1021 432 -216790526
 ShowKerningPane:	1
 PluginStartupMode:	Ask
-Recent:	/Users/milavshah/Library/Fonts/JetBrains Mono Bold Italic Nerd Font Complete.ttf.featfreeze.otf
-Recent:	/Users/milavshah/Library/Fonts/JetBrains Mono Bold Nerd Font Complete.ttf.featfreeze.otf
-Recent:	/Users/milavshah/Library/Fonts/JetBrains Mono ExtraBold Italic Nerd Font Complete.ttf.featfreeze.otf
-Recent:	/Users/milavshah/Library/Fonts/JetBrains Mono ExtraBold Nerd Font Complete.ttf.featfreeze.otf
-Recent:	/Users/milavshah/Library/Fonts/JetBrains Mono ExtraLight Italic Nerd Font Complete.ttf.featfreeze.otf
-Recent:	/Users/milavshah/Library/Fonts/JetBrains Mono ExtraLight Nerd Font Complete.ttf.featfreeze.otf
-Recent:	/Users/milavshah/Library/Fonts/JetBrains Mono Italic Nerd Font Complete.ttf.featfreeze.otf
-Recent:	/Users/milavshah/Library/Fonts/JetBrains Mono Light Italic Nerd Font Complete.ttf.featfreeze.otf
-Recent:	/Users/milavshah/Library/Fonts/JetBrains Mono Light Nerd Font Complete.ttf.featfreeze.otf
-Recent:	/Users/milavshah/Library/Fonts/JetBrains Mono Medium Italic Nerd Font Complete.ttf.featfreeze.otf
+Recent:	/Users/milav/Downloads/Inconsolata/static/Inconsolata_Condensed/Inconsolata_Condensed-Bold.ttf
+Recent:	/Users/milav/Downloads/Inconsolata/static/Inconsolata_Condensed/Inconsolata_Condensed-Black.ttf
+Recent:	/Users/milav/Downloads/Consolas-Font/Consolas.ttf
+Recent:	/Users/milav/Downloads/Consolas-Font/consolai.ttf
+Recent:	/Users/milav/Downloads/Consolas-Font/CONSOLAB.TTF
+Recent:	/Users/milav/Downloads/Consolas-Font/CONSOLA.TTF
+Recent:	/Users/milav/Downloads/Inconsolata/static/Inconsolata/Inconsolata-Black.ttf
+Recent:	/Users/milav/Downloads/Inconsolata/static/Inconsolata/Inconsolata-Bold.ttf
+Recent:	/Users/milav/Downloads/Inconsolata/static/Inconsolata/Inconsolata-ExtraBold.ttf
+Recent:	/Users/milav/Downloads/Inconsolata/static/Inconsolata/Inconsolata-ExtraLight.ttf

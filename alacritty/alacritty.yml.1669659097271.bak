@@ -61,7 +61,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  decorations: full
+  decorations: none 
 
   # Background opacity
   #
@@ -116,7 +116,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: iA Writer Mono S
+    family: PragmataPro for Powerline 
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -127,7 +127,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: iA Writer Mono S
+    family: PragmataPro for Powerline
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -138,7 +138,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: iA Writer Mono S
+    family: PragmataPro for Powerline
 
     # The `style` can be specified to pick a specific face.
     style: Italic
@@ -149,7 +149,7 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: iA Writer Mono S
+    family: PragmataPro for Powerline 
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
@@ -165,8 +165,7 @@ font:
     y: 0
 
   # Glyph offset determines the locations of the glyphs within their cells with
-  # the default being at the bottom. Increasing `x` moves the glyph to the
-  # right, increasing `y` moves the glyph upward.
+  # the default being at the bottom. Increasing `x` moves the glyph to the right, increasing `y` moves the glyph upward.
   glyph_offset:
     x: 0
     y: 0
@@ -184,21 +183,21 @@ draw_bold_text_with_bright_colors: false
 colors:
   # Default colors
   primary:
-    background: '#282c34'
-    foreground: '#abb2bf'
+    background: '#051e32'
+    foreground: '#829696'
 
   # Normal colors
   normal:
     # NOTE: Use '#131613' for the `black` color if you'd like to see
     # black text on the background.
-    black: '#282c34'
-    red: '#e06c75'
-    green: '#98c379'
-    yellow: '#d19a66'
-    blue: '#61afef'
-    magenta: '#c678dd'
-    cyan: '#56b6c2'
-    white: '#abb2bf'
+    black: '#161242'
+    red: '#924d3b'
+    green: '#3f8776'
+    yellow: '#ae7b43'
+    blue: '#465fdf'
+    magenta: '#813495'
+    cyan: '#5191bc'
+    white: '#d7e0eb'
 
   # Bright colors
   bright:

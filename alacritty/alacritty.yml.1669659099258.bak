@@ -61,7 +61,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  decorations: buttonless
+  decorations: none 
 
   # Background opacity
   #
@@ -116,10 +116,10 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: SauceCodePro Nerd Font
+    family: PragmataPro for Powerline 
 
     # The `style` can be specified to pick a specific face.
-    style: Light
+    style: Regular
 
   # Bold font face
   bold:
@@ -127,10 +127,10 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: SauceCodePro Nerd Font
+    family: PragmataPro for Powerline
 
     # The `style` can be specified to pick a specific face.
-    style: Medium
+    style: Bold
 
   # Italic font face
   italic:
@@ -138,10 +138,10 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: SauceCodePro Nerd Font
+    family: PragmataPro for Powerline
 
     # The `style` can be specified to pick a specific face.
-    style: Light Italic
+    style: Italic
 
   # Bold italic font face
   bold_italic:
@@ -149,10 +149,10 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: SauceCodePro Nerd Font
+    family: PragmataPro for Powerline 
 
     # The `style` can be specified to pick a specific face.
-    style: Medium Italic
+    style: Bold Italic
 
   # Point size
   size: 14.0
@@ -181,30 +181,32 @@ font:
 draw_bold_text_with_bright_colors: false
 
 colors:
-  name: astromouse
-  author: ""
+  # Default colors
   primary:
-    background: "#000000"
-    foreground: "#ffffff"
-  cursor:
-    text: "#000000"
-    cursor: "#ffffff"
+    background: '#051e32'
+    foreground: '#829696'
+
+  # Normal colors
   normal:
-    black: "#1c1c1c"
-    red: "#d770af"
-    green: "#9acc79"
-    yellow: "#d0d26b"
-    blue: "#77b6c5"
-    magenta: "#a488d9"
-    cyan: "#7fcab3"
-    white: "#8d8d8d"
+    # NOTE: Use '#131613' for the `black` color if you'd like to see
+    # black text on the background.
+    black: '#161242'
+    red: '#924d3b'
+    green: '#3f8776'
+    yellow: '#ae7b43'
+    blue: '#465fdf'
+    magenta: '#813495'
+    cyan: '#5191bc'
+    white: '#d7e0eb'
+
+  # Bright colors
   bright:
-    black: "#3d3a3a"
-    red: "#d28abf"
-    green: "#8fb676"
-    yellow: "#c8bc45"
-    blue: "#8fa7b9"
-    magenta: "#bd89de"
-    cyan: "#6ec2a8"
-    white: "#dad3d3"
-theme: Astromouse
+    black: '#5c6370'
+    red: '#e06c75'
+    green: '#98c379'
+    yellow: '#d19a66'
+    blue: '#61afef'
+    magenta: '#c678dd'
+    cyan: '#56b6c2'
+    white: '#ffffff'
+theme: One-Dark

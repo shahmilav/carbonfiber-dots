@@ -61,7 +61,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  decorations: full
+  decorations: none
 
   # Background opacity
   #
@@ -119,7 +119,7 @@ font:
     family: SauceCodePro Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: Light
+    style: Medium
 
   # Bold font face
   bold:
@@ -127,10 +127,10 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: SauceCodePro Nerd Font
+    family: null
 
     # The `style` can be specified to pick a specific face.
-    style: Medium
+    style: Extra Bold
 
   # Italic font face
   italic:
@@ -138,10 +138,9 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: SauceCodePro Nerd Font
-
+    family: null
     # The `style` can be specified to pick a specific face.
-    style: Light Italic
+    style: Medium Italic
 
   # Bold italic font face
   bold_italic:
@@ -149,10 +148,10 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: SauceCodePro Nerd Font
+    family: null
 
     # The `style` can be specified to pick a specific face.
-    style: Medium Italic
+    style: Extra Bold Italic
 
   # Point size
   size: 14.0
@@ -183,28 +182,36 @@ draw_bold_text_with_bright_colors: false
 colors:
   # Default colors
   primary:
-    background: '#2E3440'
-    foreground: '#D8DEE9'
+    # hard contrast: background = '#1d2021'
+    background: '#282828'
+    # soft contrast: background = '#32302f'
+    foreground: '#ebdbb2'
 
   # Normal colors
   normal:
-    black: '#3B4252'
-    red: '#BF616A'
-    green: '#A3BE8C'
-    yellow: '#EBCB8B'
-    blue: '#81A1C1'
-    magenta: '#B48EAD'
-    cyan: '#88C0D0'
-    white: '#E5E9F0'
+    black: '#282828'
+    red: '#cc241d'
+    green: '#98971a'
+    yellow: '#d79921'
+    blue: '#458588'
+    magenta: '#b16286'
+    cyan: '#689d6a'
+    white: '#a89984'
 
   # Bright colors
   bright:
-    black: '#4C566A'
-    red: '#BF616A'
-    green: '#A3BE8C'
-    yellow: '#EBCB8B'
-    blue: '#81A1C1'
-    magenta: '#B48EAD'
-    cyan: '#8FBCBB'
-    white: '#ECEFF4'
-theme: Nord
+    black: '#928374'
+    red: '#fb4934'
+    green: '#b8bb26'
+    yellow: '#fabd2f'
+    blue: '#83a598'
+    magenta: '#d3869b'
+    cyan: '#8ec07c'
+    white: '#ebdbb2'
+theme: Gruvbox-Dark
+
+cursor:
+  style:
+    shape: Beam
+  vi_mode_style:
+    shape: Block

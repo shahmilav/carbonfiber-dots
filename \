@@ -1,0 +1,56 @@
+PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
+ITEM_DIR="$HOME/.config/sketchybar/items"
+
+source $HOME/.config/sketchybar/colors.sh
+source $HOME/.config/sketchybar/icons.sh
+
+export FONT="SF Pro"
+export NERD_FONT="SFMono Nerd Font"
+
+#sketchybar --bar height=30         \ 
+#                 blur_radius=100   \
+#                 position=top      \  
+#                 padding_left=10   \
+#                 padding_right=10  \
+#                 color=0x80121212\ 
+#                 shadow=on         \
+#                 margin=10         \
+#                 corner_radius=500 \
+
+sketchybar --bar margin=10 \
+                 shadow=on \
+                 y_offset=10 \
+                 corner_radius=10 \
+                 height=30         \ 
+                 blur_radius=100   \
+                 position=top      \  
+                 padding_left=10   \
+                 padding_right=10  \
+                 color=0xff121212  \ 
+
+
+sketchybar --default updates=when_shown                       \
+                     drawing=on                               \
+                     icon.font="$NERD_FONT:Regular:15.0"      \
+                     icon.color=0xffffffff                    \
+                     label.font="$FONT:Medium:15.0"            \
+                     label.color=0xffffffff                   \
+                     label.padding_left=4                     \
+                     label.padding_right=4                    \
+                     icon.padding_left=4                      \
+                     icon.padding_right=4                     \
+
+source $ITEM_DIR/apple.sh
+source $ITEM_DIR/spaces.sh
+source $ITEM_DIR/window_title.sh
+source $ITEM_DIR/clock.sh
+
+source $ITEM_DIR/wifi.sh
+source $ITEM_DIR/volume.sh
+source $ITEM_DIR/battery.sh
+source $ITEM_DIR/cpu.sh
+source $ITEM_DIR/darkside.sh
+
+sketchybar --update
+
+echo "sketchybar configuration loaded.."
