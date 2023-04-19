@@ -3,67 +3,21 @@ if status is-interactive
 end
 
 
-##########################################
+fish_add_path /opt/lcal/bin /opt/local/sbin/ /usr/local/bin /usr/bin /bin /sbin /usr/sbin
 
-fish_add_path /opt/homebrew/bin
-fish_add_path /usr/local/bin
-fish_add_path $HOME/.emacs.d/bin
-fish_add_path /opt/local/bin
-fish_add_path $HOME/libs/apache-maven-3.6.3/bin
-fish_add_path /opt/local/sbin
-fish_add_path $HOME/.local.bin
-fish_add_path $HOME/.config/nvim/bin
-fish_add_path $HOME/.local/bin
+fish_add_path /Library/Frameworks/Python.framework/Versions/3.10/bin
+fish_add_path /Users/milav/torch/install/bin
 
-##########################################
+fish_add_path /opt/homebrew/bin/ /opt/homebrew/sbin/
+fish_add_path /Users/milav/.cargo/bin
 
-abbr --add bye exit
-alias ip="curl ifconfig.me"
+fish_add_path /Users/milav/bin
 
-alias dev="cd ~/dev"
-alias jag="cd ~/dev/jaguar"
-alias blog="cd ~/dev/blog"
-alias conf="cd ~/.config"
+fish_add_path /Users/milav/Library/Application Support/JetBrains/Toolbox/scripts
 
-abbr --add g git
-abbr --add ga git add
-abbr --add gc git commit
-abbr --add gd git diff
-abbr --add gs git status
+fish_add_path /Applications/iTerm.app/Contents/Resources/utilities 
 
-abbr --add  .. cd ..
-abbr --add ... cd ../..
-abbr --add .... cd ../../..
-abbr --add ..... cd ../../../..
 
-abbr --add mvnc mvn clean
-abbr --add mvncom mvn compile
-abbr --add mvnboot mvn spring-boot:run
+# prompt
 
-alias tidy="tidy -m --indent yes --tidy-mark no"
-
-abbr --add py python3.10
-alias moon="python3.10 ~/dev/moon_phases/moon_phase.py"
-alias picalc="python3.10  ~/dev/pi-thon-calc/calculator.py" 
-
-alias stp="open -a 'Safari Technology Preview'" 
-
-########################################## 
-
-function dark -d "Toggle macOS appearance" 
-    osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to not dark mode'; 
-end 
-
-function take -d "Create a directory and set CWD" 
-    command mkdir $argv 
-    if test $status = 0
-        switch $argv[(count $argv)]
-            case '-*'
-
-            case '*'
-            cd $argv[(count $argv)]
-            return
-        end
-    end
-end
-
+set --global hydro_symbol_prompt "λ"

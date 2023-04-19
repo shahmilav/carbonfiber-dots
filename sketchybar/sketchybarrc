@@ -1,43 +1,73 @@
-PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
-ITEM_DIR="$HOME/.config/sketchybar/items"
+#!/usr/bin/env sh
 
-source $HOME/.config/sketchybar/colors.sh
-source $HOME/.config/sketchybar/icons.sh
+source "$HOME/.config/sketchybar/colors.sh" # Loads all defined colors
+source "$HOME/.config/sketchybar/icons.sh" # Loads all defined icons
 
-export FONT="SF Pro Display"
-export NERD_FONT="SFMono Nerd Font"
+ITEM_DIR="$HOME/.config/sketchybar/items" # Directory where the items are configured
+PLUGIN_DIR="$HOME/.config/sketchybar/plugins" # Directory where all the plugin scripts are stored
 
-sketchybar --bar color=0x33000000\
-                 blur_radius=10  \
-                 margin=10        \
-                 corner_radius=10 \
-                 height=30        \
-                 y_offset=10      \
-                 padding_left=10  \
-                 padding_right=10 \
+FONT="SF Pro" # Needs to have Regular, Bold, Semibold, Heavy and Black variants
+PADDINGS=3 # All paddings use this value (icon, label, background)
 
-sketchybar --default updates=when_shown                    \
-                      drawing=on                           \
-                      icon.font="$NERD_FONT:Regular:15.0"  \
-                      icon.color=0xffffffff                \
-                      label.font="$FONT:Medium:15.0"       \
-                      label.color=0xffffffff               \
-                      label.padding_left=4                 \
-                      label.padding_right=4                \
-                      icon.padding_left=4                  \
-                      icon.padding_right=4                            
+# Setting up and starting the helper process
+HELPER=git.felix.helper
+killall helper
+cd $HOME/.config/sketchybar/helper && make
+$HOME/.config/sketchybar/helper/helper $HELPER > /dev/null 2>&1 &
 
-source $ITEM_DIR/apple.sh
-source $ITEM_DIR/spaces.sh
-source $ITEM_DIR/window_title.sh
-source $ITEM_DIR/yabai.sh
-source $ITEM_DIR/clock.sh
-source $ITEM_DIR/volume.sh
-source $ITEM_DIR/battery.sh
-source $ITEM_DIR/cpu.sh
-source $ITEM_DIR/darkside.sh
-source $ITEM_DIR/wifi.sh
+# Unload the macOS on screen indicator overlay for volume change
+launchctl unload -F /System/Library/LaunchAgents/com.apple.OSDUIHelper.plist > /dev/null 2>&1 &
 
+# Setting up the general bar appearance and default values
+sketchybar --bar     height=39                                         \
+                     color=$BAR_COLOR                                  \
+                     shadow=off                                        \
+                     position=top                                      \
+                     sticky=on                                         \
+                     padding_right=7                                   \
+                     padding_left=7                                    \
+                     corner_radius=9                                   \
+                     y_offset=20                                       \
+                     margin=40                                         \
+                     blur_radius=0                                     \
+                     notch_width=0                                     \
+                                                                       \
+           --default updates=when_shown                                \
+                     icon.font="$FONT:Bold:14.0"                       \
+                     icon.color=$ICON_COLOR                            \
+                     icon.padding_left=$PADDINGS                       \
+                     icon.padding_right=$PADDINGS                      \
+                     label.font="$FONT:Semibold:13.0"                  \
+                     label.color=$LABEL_COLOR                          \
+                     label.padding_left=$PADDINGS                      \
+                     label.padding_right=$PADDINGS                     \
+                     background.padding_right=$PADDINGS                \
+                     background.padding_left=$PADDINGS                 \
+                     background.height=26                              \
+                     background.corner_radius=9                        \
+                     popup.background.border_width=2                   \
+                     popup.background.corner_radius=11                 \
+                     popup.background.border_color=$POPUP_BORDER_COLOR \
+                     popup.background.color=$POPUP_BACKGROUND_COLOR    \
+                     popup.background.shadow.drawing=on
+
+# Left
+source "$ITEM_DIR/apple.sh"
+source "$ITEM_DIR/spaces.sh"
+source "$ITEM_DIR/front_app.sh"
+
+# Center
+source "$ITEM_DIR/spotify.sh"
+
+# Right
+source "$ITEM_DIR/calendar.sh"
+source "$ITEM_DIR/brew.sh"
+source "$ITEM_DIR/github.sh"
+source "$ITEM_DIR/volume.sh"
+source "$ITEM_DIR/divider.sh"
+# source "$ITEM_DIR/cpu.sh"
+
+# Forcing all item scripts to run (never do this outside of sketchybarrc)
 sketchybar --update
 
-echo "sketchybar configuration loaded.."
+echo "sketchybar configuation loaded.."

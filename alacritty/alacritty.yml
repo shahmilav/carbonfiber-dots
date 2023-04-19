@@ -46,8 +46,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 1
-    y: 1
+    x: 2
+    y: 2
 
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: true
@@ -61,7 +61,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  decorations: none
+  decorations: full
 
   # Background opacity
   #
@@ -116,42 +116,37 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: SauceCodePro Nerd Font
+    family: SF Mono
 
     # The `style` can be specified to pick a specific face.
-    style: Medium
-
-  # Bold font face
+    style: Light 
+    # Bold font face
   bold:
     # Font family
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
     family: null
-
     # The `style` can be specified to pick a specific face.
-    style: Extra Bold
-
-  # Italic font face
-  italic:
+    style: Medium
+    # Italic font face
+    #italic:
     # Font family
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: null
+    #family: null
     # The `style` can be specified to pick a specific face.
-    style: Medium Italic
-
-  # Bold italic font face
-  bold_italic:
+    # style: 
+    # Bold italic font face
+    #bold_italic:
     # Font family
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: null
-
+    # family: null
     # The `style` can be specified to pick a specific face.
-    style: Extra Bold Italic
+    #style: 
 
   # Point size
   size: 14.0
@@ -179,10 +174,16 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: false
 
+cursor:
+  style:
+    shape: Beam
+  vi_mode_style:
+    shape: Block
+
 colors:
   # Default colors
   primary:
-    background: '#282c34'
+    background: '#000000'
     foreground: '#abb2bf'
 
   # Normal colors
@@ -209,9 +210,3 @@ colors:
     cyan: '#56b6c2'
     white: '#ffffff'
 theme: One-Dark
-
-cursor:
-  style:
-    shape: Beam
-  vi_mode_style:
-    shape: Block
