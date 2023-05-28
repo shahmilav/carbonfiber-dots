@@ -1,5 +1,0 @@
-* SketchyBar
-------
-[[Screen Shot 2022-11-22 at 10.40.24 AM.png]]
-
-My sketchybar Configuration (as seen in image above)
