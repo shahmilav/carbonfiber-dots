@@ -19,7 +19,7 @@ window:
   #
   # Specified in floating number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  opacity: 0.98
+  #opacity: 1.0
   # Window dimensions (changes require restart)
   #
   # Specified in number of columns/lines, not pixels.
@@ -85,29 +85,29 @@ window:
   #multiplier: 3
 # Font configuration
 font:
-  # Normal (roman) font face
+  # Light (roman) font face
   normal:
     # Font family
     #
     # Default:
-    #   - (macOS) Hack
-    #   - (Linux/BSD) Hack
+    #   - (macOS) SF Mono
+    #   - (Linux/BSD) SF Mono
     #   - (Windows) Consolas
-    family: Hack
+    family: SF Mono
 
     # The `style` can be specified to pick a specific face.
-    style: Regular
+    style: Light
 
-  # Bold font face
+  # Medium font face
   bold:
     # Font family
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Hack
+    family: SF Mono
 
     # The `style` can be specified to pick a specific face.
-    style: Bold
+    style: Medium
 
   # Italic font face
   italic:
@@ -115,24 +115,24 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Hack
+    family: SF Mono
 
     # The `style` can be specified to pick a specific face.
     style: Italic
 
-  # Bold italic font face
+  # Medium italic font face
   bold_italic:
     # Font family
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Hack
+    family: SF Mono
 
     # The `style` can be specified to pick a specific face.
-    style: Bold Italic
+    style: Medium Italic
 
   # Point size
-  size: 15.0
+  size: 16.0
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
   #offset:
@@ -151,28 +151,30 @@ font:
 colors:
   # Default colors
   primary:
-    background: '0x1b182c'
-    foreground: '0xcbe3e7'
+    background: '#282c34'
+    foreground: '#abb2bf'
 
   # Normal colors
   normal:
-    black: '0x100e23'
-    red: '0xff8080'
-    green: '0x95ffa4'
-    yellow: '0xffe9aa'
-    blue: '0x91ddff'
-    magenta: '0xc991e1'
-    cyan: '0xaaffe4'
-    white: '0xcbe3e7'
+    # NOTE: Use '#131613' for the `black` color if you'd like to see
+    # black text on the background.
+    black: '#282c34'
+    red: '#e06c75'
+    green: '#98c379'
+    yellow: '#d19a66'
+    blue: '#61afef'
+    magenta: '#c678dd'
+    cyan: '#56b6c2'
+    white: '#abb2bf'
 
   # Bright colors
   bright:
-    black: '0x565575'
-    red: '0xff5458'
-    green: '0x62d196'
-    yellow: '0xffb378'
-    blue: '0x65b2ff'
-    magenta: '0x906cff'
-    cyan: '0x63f2f1'
-    white: '0xa6b3cc'
-theme: Challenger-Deep
+    black: '#5c6370'
+    red: '#e06c75'
+    green: '#98c379'
+    yellow: '#d19a66'
+    blue: '#61afef'
+    magenta: '#c678dd'
+    cyan: '#56b6c2'
+    white: '#ffffff'
+theme: One-Dark

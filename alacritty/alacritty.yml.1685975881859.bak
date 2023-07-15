@@ -19,7 +19,7 @@ window:
   #
   # Specified in floating number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  opacity: 0.98
+  #opacity: 1.0
   # Window dimensions (changes require restart)
   #
   # Specified in number of columns/lines, not pixels.
@@ -52,7 +52,7 @@ window:
     # Values for `decorations` (macOS only):
     #     - transparent: Title bar, transparent background and title bar buttons
     #     - buttonless: Title bar, transparent background, but no title bar buttons
-    decorations: none
+    #decorations: full
     # Startup Mode (changes require restart)
     #
     # Values for `startup_mode`:
@@ -90,13 +90,13 @@ font:
     # Font family
     #
     # Default:
-    #   - (macOS) Hack
-    #   - (Linux/BSD) Hack
+    #   - (macOS) GoMono Nerd Font
+    #   - (Linux/BSD) GoMono Nerd Font
     #   - (Windows) Consolas
-    family: Hack
+    family: GoMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: Regular
+    style: Normal
 
   # Bold font face
   bold:
@@ -104,7 +104,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Hack
+    family: GoMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -115,7 +115,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Hack
+    family: GoMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Italic
@@ -126,7 +126,7 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Hack
+    family: GoMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
@@ -151,28 +151,33 @@ font:
 colors:
   # Default colors
   primary:
-    background: '0x1b182c'
-    foreground: '0xcbe3e7'
+    background: '#212121'
+    foreground: '#c0c5ce'
+    bright_foreground: '#f3f4f5'
+
+  cursor:
+    text: '#212121'
+    cursor: '#c0c5ce'
 
   # Normal colors
   normal:
-    black: '0x100e23'
-    red: '0xff8080'
-    green: '0x95ffa4'
-    yellow: '0xffe9aa'
-    blue: '0x91ddff'
-    magenta: '0xc991e1'
-    cyan: '0xaaffe4'
-    white: '0xcbe3e7'
+    black: '#212121'
+    red: '#e57373'
+    green: '#a6bc69'
+    yellow: '#fac863'
+    blue: '#6699cc'
+    magenta: '#c594c5'
+    cyan: '#5fb3b3'
+    white: '#c0c5ce'
 
   # Bright colors
   bright:
-    black: '0x565575'
-    red: '0xff5458'
-    green: '0x62d196'
-    yellow: '0xffb378'
-    blue: '0x65b2ff'
-    magenta: '0x906cff'
-    cyan: '0x63f2f1'
-    white: '0xa6b3cc'
-theme: Challenger-Deep
+    black: '#5c5c5c'
+    red: '#e57373'
+    green: '#a6bc69'
+    yellow: '#fac863'
+    blue: '#6699cc'
+    magenta: '#c594c5'
+    cyan: '#5fb3b3'
+    white: '#f3f4f5'
+theme: Oxide
