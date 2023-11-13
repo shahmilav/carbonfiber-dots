@@ -40,7 +40,7 @@ end
 
 alias msigma="cd ~/dev/projects/webdev/stockSimulator"
 
-set --global hydro_symbol_prompt ">>>"
+set --global hydro_symbol_prompt "λ"
 set --global hydro_symbol_git_dirty "*"
 
 set --global hydro_color_pwd blue
@@ -66,10 +66,31 @@ function @@@
 end
 
 function font
-  echo "  o0O s5S 9gq z2Z !|l1Iij {([|])} .,;: ``''""
-  a@#* vVuUwW <>;^°=-~ öÖüÜäÄßµ \/\/ -- == __
-  the quick brown fox jumps over the lazy dog
-  THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
-  0123456789 &-+@ for (int i=0; i<=j; i++) {}"
+  echo "o0O s5S 9gq z2Z !|l1Iij {([|])} .,;: ``''\""
+  echo "a@#* vVuUwW \<\>;^°=-~ öÖüÜäÄßµ \/\/ -- == __"
+  echo "the quick brown fox jumps over the lazy dog"
+  echo "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG"
+  echo "0123456789 &-+@ for (int i=0; i<=j; i++) {}"
 end
 
+function ll
+  exa -l --git --group-directories-first $argv
+end
+
+function stock -a arg
+  curl "terminal-stocks.dev/$arg"
+end
+
+function msigma_serve
+  {$HOME}/dev/projects/webdev/stockSimulator/server/cmd/cmd
+end
+
+function fh -a arg
+  curl -s "https://finnhub.io/api/v1/quote?symbol="$arg"&token="$FINNHUB_KEY | jq --color-output .
+end
+
+function watchlist
+  ticker -w avgo,bac,sso,voo,tsla,f,v,smci
+end
+
+export ALPHAVANTAGE_API_KEY=HORXASRHL0NLNH1N

@@ -1,4 +1,4 @@
-# Milav's Dotfiles
+# ~/.config/
 
-Dotfiles for my macOS Setup. Includes neovim, fish.
+Configuration for my macOS setup. Includes files for neovim, fish shell, iTerm2.
 
