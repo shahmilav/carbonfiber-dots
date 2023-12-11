@@ -37,9 +37,6 @@ end
 ## FISH PROMPT ##
 #################
 
-
-alias msigma="cd ~/dev/projects/webdev/stockSimulator"
-
 set --global hydro_symbol_prompt "λ"
 set --global hydro_symbol_git_dirty "*"
 
@@ -73,24 +70,10 @@ function font
   echo "0123456789 &-+@ for (int i=0; i<=j; i++) {}"
 end
 
-function ll
-  exa -l --git --group-directories-first $argv
-end
 
-function stock -a arg
-  curl "terminal-stocks.dev/$arg"
-end
-
-function msigma_serve
-  {$HOME}/dev/projects/webdev/stockSimulator/server/cmd/cmd
-end
 
 function fh -a arg
   curl -s "https://finnhub.io/api/v1/quote?symbol="$arg"&token="$FINNHUB_KEY | jq --color-output .
-end
-
-function watchlist
-  ticker -w avgo,bac,sso,voo,tsla,f,v,smci
 end
 
 export ALPHAVANTAGE_API_KEY=HORXASRHL0NLNH1N
