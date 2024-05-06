@@ -1,4 +1,5 @@
 if status is-interactive
+  cl
 end
 
 set -U fish_greeting ""
@@ -37,7 +38,7 @@ end
 ## FISH PROMPT ##
 #################
 
-set --global hydro_symbol_prompt "milav..."
+set --global hydro_symbol_prompt "λ"
 set --global hydro_symbol_git_dirty "*"
 
 set --global hydro_color_pwd blue
@@ -56,7 +57,7 @@ set --global lucid_prompt_symbol_error "!!!"
 set --global lucid_prompt_symbol_error_color red
 
 set --global tide_character_icon "λ"
-#set --global tide_pwd_color_truncated_dirs blue
+set --global tide_pwd_color_truncated_dirs blue
 
 function @@@
   exit
@@ -80,12 +81,8 @@ export ALPHAVANTAGE_API_KEY=HORXASRHL0NLNH1N
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-#if test -f /Users/milav/anaconda3/bin/conda
-#    eval /Users/milav/anaconda3/bin/conda "shell.fish" "hook" $argv | source
-#end
+if test -f /Users/milav/anaconda3/bin/conda
+    eval /Users/milav/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+end
 # <<< conda initialize <<<
 
-
-# Setting PATH for Python 3.12
-# The original version is saved in /Users/milav/.config/fish/config.fish.pysave
-set -x PATH "/Library/Frameworks/Python.framework/Versions/3.12/bin" "$PATH"

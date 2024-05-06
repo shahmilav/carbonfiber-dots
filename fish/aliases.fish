@@ -18,6 +18,8 @@ alias dots "cd ~/.config"
 
 alias pip "pip3"
 
+alias dark "open -a 'Toggle Appearance'"
+
 function take -a dir
   mkdir -p $dir
   cd $dir
