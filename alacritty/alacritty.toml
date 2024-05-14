@@ -1,0 +1,9 @@
+import = ["~/.config/alacritty/themes/papercolor_light.toml"]
+
+window.padding={ x = 5, y = 5 }
+window.dynamic_padding=true
+#window.opacity=0.95
+
+font.normal={ family="Hack Nerd Font", style="Regular"}
+font.size=17
+
