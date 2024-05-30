@@ -12,7 +12,7 @@
     "metrics": false
   },
   "buffer_font_family": "JetBrains Mono",
-  "theme": "Rosé Pine Moon",
+  "theme": "Ayu Dark",
   "ui_font_size": 16,
   "buffer_font_size": 18,
   "autosave": "on_focus_change"

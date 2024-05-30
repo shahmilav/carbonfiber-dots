@@ -18,7 +18,7 @@ alias dots "cd ~/.config"
 
 alias pip "pip3"
 
-alias dark "open -a 'Toggle Appearance'"
+alias dark "open -a 'Toggle Appearance'; sleep .4; source ~/.config/fish/config.fish"
 
 function take -a dir
   mkdir -p $dir

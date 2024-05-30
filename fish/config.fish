@@ -3,6 +3,7 @@ end
 
 set -U fish_greeting ""
 set -U EDITOR nvim
+set -U GROQ_API_KEY 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
 
 ##########
 ## PATH ##
@@ -30,61 +31,38 @@ source ~/.config/fish/aliases.fish
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
 function ab $color
-  echo -n $color | nc -4u -w0 localhost 1738
+	echo -n $color | nc -4u -w0 localhost 1738
 end
 
 #################
 ## FISH PROMPT ##
 #################
 
-set --global hydro_symbol_prompt "milav..."
+set --global hydro_symbol_prompt $USER
 set --global hydro_symbol_git_dirty "*"
-
 set --global hydro_color_pwd blue
-set --global hydro_color_git green
+set --global hydro_color_git magenta
 set --global hydro_color_error red
-set --global hydro_color_prompt magenta
+set --global hydro_color_prompt green
 set --global hydro_color_duration yellow
 
-set --global lucid_prompt_symbol ">>>"
-set --global lucid_cwd_color blue
-set --global lucid_git_color green
-set --global lucid_prompt_error_color red
-set --global lucid_prompt_symbol_color magenta
-set --global lucid_dirty_indicator "*"
-set --global lucid_prompt_symbol_error "!!!"
-set --global lucid_prompt_symbol_error_color red
-
-set --global tide_character_icon "λ"
-#set --global tide_pwd_color_truncated_dirs blue
-
 function @@@
-  exit
+	exit
 end
 
 function font
-  echo "o0O s5S 9gq z2Z !|l1Iij {([|])} .,;: ``''\""
-  echo "a@#* vVuUwW \<\>;^°=-~ öÖüÜäÄßµ \/\/ -- == __"
-  echo "the quick brown fox jumps over the lazy dog"
-  echo "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG"
-  echo "0123456789 &-+@ for (int i=0; i<=j; i++) {}"
+	echo "o0O s5S 9gq z2Z !|l1Iij {([|])} .,;: ``''\""
+	echo "a@#* vVuUwW \<\>;^°=-~ öÖüÜäÄßµ \/\/ -- == __"
+	echo "the quick brown fox jumps over the lazy dog"
+	echo "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG"
+	echo "0123456789 &-+@ for (int i=0; i<=j; i++) {}"
 end
 
-
-
 function fh -a arg
-  curl -s "https://finnhub.io/api/v1/quote?symbol="$arg"&token="$FINNHUB_KEY | jq --color-output .
+	curl -s "https://finnhub.io/api/v1/quote?symbol="$arg"&token="$FINNHUB_KEY | jq --color-output .
 end
 
 export ALPHAVANTAGE_API_KEY=HORXASRHL0NLNH1N
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-#if test -f /Users/milav/anaconda3/bin/conda
-#    eval /Users/milav/anaconda3/bin/conda "shell.fish" "hook" $argv | source
-#end
-# <<< conda initialize <<<
-
 
 # Setting PATH for Python 3.12
 # The original version is saved in /Users/milav/.config/fish/config.fish.pysave
