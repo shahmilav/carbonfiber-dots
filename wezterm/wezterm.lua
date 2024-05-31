@@ -3,13 +3,42 @@ local wezterm = require 'wezterm'
 local config = {}
 
 -- APPEARANCE
-config.font = wezterm.font 'JetBrains Mono'
+config.font = wezterm.font 'SFMono Nerd Font'
 config.font_size = 18
 
-config.color_scheme = 'Oxocarbon Dark (Gogh)'
+function get_appearance()
+  if wezterm.gui then
+    return wezterm.gui.get_appearance()
+  end
+  return 'Dark'
+end
+
+function scheme_for_appearance(appearance)
+  if appearance:find 'Dark' then
+    return 'Modus-Vivendi'
+  else
+    return 'Modus-Operandi'
+  end
+end
+
+config.color_scheme = scheme_for_appearance(get_appearance())
+
+-- config.window_background_image = '/Users/milav/wallpapers/vector/Fission.png'
+-- config.window_background_image_hsb = {
+--   -- Darken the background image by reducing it to 1/3rd
+--   brightness = 0.1,
+--
+--   -- You can adjust the hue by scaling its value.
+--   -- a multiplier of 1.0 leaves the value unchanged.
+--   hue = 1.0,
+--
+--   -- You can adjust the saturation also.
+--   saturation = 1.0,
+-- }
+--
+
 
 config.enable_scroll_bar = true
 
-config.default_cwd = wezterm.home_dir
 
 return config
