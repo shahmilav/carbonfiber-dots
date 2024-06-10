@@ -25,6 +25,8 @@ function take -a dir
   cd $dir
 end
 
+	
+
 alias fishconf "$EDITOR ~/.config/fish/config.fish"
 
 

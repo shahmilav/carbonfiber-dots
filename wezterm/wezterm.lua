@@ -3,21 +3,21 @@ local wezterm = require 'wezterm'
 local config = {}
 
 -- APPEARANCE
-config.font = wezterm.font 'SFMono Nerd Font'
+config.font = wezterm.font 'SF Mono'
 config.font_size = 18
 
-function get_appearance()
+local function get_appearance()
   if wezterm.gui then
     return wezterm.gui.get_appearance()
   end
   return 'Dark'
 end
 
-function scheme_for_appearance(appearance)
+local function scheme_for_appearance(appearance)
   if appearance:find 'Dark' then
-    return 'Modus-Vivendi'
+    return 'One Dark (base16)'
   else
-    return 'Modus-Operandi'
+    return 'One Light (base16)'
   end
 end
 
