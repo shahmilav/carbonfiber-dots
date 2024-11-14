@@ -1,20 +1,13 @@
-# Active color scheme. Switches between light mode and dark mode on shell startup.
-import = ["~/.config/alacritty/active.toml"]
-
-
-[env]
-ALACRITTY = "true"
-
 [window]
-padding = { x = 5, y = 5 }
-dynamic_padding = true
-decorations = "full"
-#opacity = 0.8
-#blur = true
+
+padding.x = 10
+padding.y = 10
+
+decorations = "Full"
+decorations_theme_variant = "Light" # "Dark"
 
 [font]
-normal = { family = "MD System Mono Trial", style = "Regular" }
-size = 17
 
-[cursor]
-style = { shape = "Beam" }
+normal.family = "JetBrains Mono"
+normal.style = "Regular"
+size = 16.0
