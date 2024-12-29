@@ -8,6 +8,7 @@ decorations_theme_variant = "Light" # "Dark"
 
 [font]
 
-normal.family = "JetBrains Mono"
+normal.family = "JetBrainsMono Nerd Font"
 normal.style = "Regular"
-size = 16.0
+size = 17.0
+offset.x=-2

@@ -1,0 +1,14 @@
+theme = Firewatch
+
+font-family  = Monaco
+font-size    = 20
+font-style   = 
+font-thicken = 
+
+custom-shader = 
+
+adjust-cell-width = -6%
+
+keybind = global:alt+`=toggle_quick_terminal
+
+

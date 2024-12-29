@@ -8,11 +8,20 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "carbonfox",
+      colorscheme = "onedark",
     },
   },
 
-  { "navarasu/onedark.nvim" },
+  {
+    "navarasu/onedark.nvim",
+    config = function()
+      require("onedark").setup({
+        style = "darker",
+      })
+    end,
+  },
   { "shaunsingh/nord.nvim" },
   { "EdenEast/nightfox.nvim" },
+  { "jesseduffield/lazygit" },
+  { "maxmx03/dracula.nvim" },
 }

@@ -1,105 +1,14 @@
 {
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0",
   "schemes" : [
     {
       "if" : {
         "device" : {
-          "productName" : "Apple Internal Keyboard \/ Trackpad",
-          "productID" : "0x281",
-          "category" : "trackpad",
-          "vendorID" : "0x5ac"
-        }
-      },
-      "scrolling" : {
-        "distance" : {
-          "vertical" : "auto"
-        },
-        "modifiers" : {
-          "vertical" : {
-            "command" : {
-              "type" : "changeSpeed",
-              "scale" : 2
-            }
-          }
-        },
-        "speed" : {
-          "vertical" : 0
-        },
-        "acceleration" : {
-          "vertical" : 1.18
-        }
-      },
-      "pointer" : {
-        "disableAcceleration" : false,
-        "acceleration" : 1.1429,
-        "speed" : 0.1751
-      }
-    },
-    {
-      "buttons" : {
-        "clickDebouncing" : {
-          "timeout" : 0
-        },
-        "mappings" : [
-          {
-            "control" : false,
-            "action" : {
-              "keyPress" : [
-                "command",
-                "`"
-              ]
-            },
-            "shift" : false,
-            "button" : 3,
-            "option" : false,
-            "command" : false
-          },
-          {
-            "button" : 4,
-            "action" : {
-              "keyPress" : [
-                "command",
-                "tab"
-              ]
-            },
-            "option" : false,
-            "shift" : false,
-            "command" : false,
-            "repeat" : false,
-            "control" : false
-          }
-        ]
-      },
-      "if" : {
-        "device" : {
-          "productName" : "2.4G Keyboard Mouse",
-          "productID" : "0x5918",
-          "vendorID" : "0x62a",
-          "category" : "mouse"
-        }
-      },
-      "scrolling" : {
-        "reverse" : {
-          "vertical" : true
-        },
-        "speed" : {
-          "vertical" : 1.93
-        },
-        "distance" : {
-          "vertical" : "auto"
-        },
-        "acceleration" : {
-          "vertical" : 1
-        }
-      }
-    },
-    {
-      "if" : {
-        "device" : {
           "vendorID" : "0x46d",
+          "serialNumber" : "96C31C3AC55907B2",
           "productID" : "0xb023",
           "category" : "mouse",
-          "productName" : "MX Master 3",
-          "serialNumber" : "96C31C3AC55907B2"
+          "productName" : "MX Master 3"
         }
       },
       "scrolling" : {
@@ -110,27 +19,19 @@
     },
     {
       "scrolling" : {
-        "speed" : {
-          "vertical" : 2.5
-        },
         "acceleration" : {
           "vertical" : 1
         }
       },
       "if" : {
         "device" : {
-          "category" : "mouse",
           "vendorID" : "0x4c",
-          "serialNumber" : "94-b0-1f-08-8f-03",
-          "productName" : "Magic Mouse",
-          "productID" : "0x269"
+          "productName" : "Magical Mouse 2",
+          "category" : "mouse",
+          "productID" : "0x269",
+          "serialNumber" : "94:B0:1F:08:8F:03"
         }
-      },
-      "pointer" : {
-        "acceleration" : 1.933,
-        "disableAcceleration" : true
       }
     }
-  ],
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0-beta.2"
+  ]
 }
