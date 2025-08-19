@@ -1,14 +1,8 @@
-theme = Firewatch
+theme = monokai remastered
+font-family  = Operator Mono Lig
+font-size    = 17
+font-thicken = true
+keybind      = global:ctrl+`=toggle_quick_terminal
 
-font-family  = Monaco
-font-size    = 20
-font-style   = 
-font-thicken = 
-
-custom-shader = 
-
-adjust-cell-width = -6%
-
-keybind = global:alt+`=toggle_quick_terminal
-
+window-padding-y   = 8
 

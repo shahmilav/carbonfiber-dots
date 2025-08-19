@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if [ $# -ne 3 ]; then
+  echo "Usage: $0 <red> <green> <blue>"
+  exit 1
+fi
+
+# Validate input
+for color in "$@"; do
+  if ! [[ "$color" =~ ^[0-9]+$ ]] || [ "$color" -lt 0 ] || [ "$color" -gt 255 ]; then
+    echo "Error: Each color value must be an integer between 0 and 255."
+    exit 1
+  fi
+done
+
+# Convert RGB to hex
+printf "#%02X%02X%02X\n" "$1" "$2" "$3"
+echo

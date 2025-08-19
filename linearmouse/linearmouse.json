@@ -1,14 +1,13 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0",
   "schemes" : [
     {
       "if" : {
         "device" : {
-          "vendorID" : "0x46d",
+          "category" : "mouse",
           "serialNumber" : "96C31C3AC55907B2",
           "productID" : "0xb023",
-          "category" : "mouse",
-          "productName" : "MX Master 3"
+          "productName" : "MX Master 3",
+          "vendorID" : "0x46d"
         }
       },
       "scrolling" : {
@@ -18,20 +17,43 @@
       }
     },
     {
+      "if" : {
+        "device" : {
+          "productID" : "0x269",
+          "serialNumber" : "94:B0:1F:08:8F:03",
+          "category" : "mouse",
+          "vendorID" : "0x4c",
+          "productName" : "Magical Mouse 2"
+        }
+      },
       "scrolling" : {
         "acceleration" : {
           "vertical" : 1
         }
       },
+      "pointer" : {
+        "acceleration" : 0,
+        "disableAcceleration" : true
+      }
+    },
+    {
       "if" : {
         "device" : {
-          "vendorID" : "0x4c",
-          "productName" : "Magical Mouse 2",
+          "vendorID" : "0x62a",
+          "productID" : "0x5918",
           "category" : "mouse",
-          "productID" : "0x269",
-          "serialNumber" : "94:B0:1F:08:8F:03"
+          "productName" : "2.4G Keyboard Mouse"
+        }
+      },
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : true
+        },
+        "acceleration" : {
+          "vertical" : 1
         }
       }
     }
-  ]
+  ],
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0"
 }
